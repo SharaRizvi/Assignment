@@ -1457,4 +1457,24 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-08%2014-26-32.png" added="2019-02-08T08:56:32Z" modified="2019-02-08T08:56:32Z" visited="2019-02-08T08:56:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-08T08:56:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-08%2014-27-02.png" added="2019-02-08T08:57:02Z" modified="2019-02-08T08:57:02Z" visited="2019-02-08T08:57:03.213137Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-08T08:57:02Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
