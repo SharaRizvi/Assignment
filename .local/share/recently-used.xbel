@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/ttn/Downloads/cancelledChequeShara.jpg" added="2019-02-02T08:18:13Z" modified="2019-02-05T10:47:43Z" visited="2019-02-02T08:18:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-02T08:21:14Z" count="3"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-05T10:47:43Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Downloads/Introduction%20to%20Linux.pptx" added="2019-02-04T07:51:07Z" modified="2019-02-04T09:47:55Z" visited="2019-02-04T07:51:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.presentationml.presentation"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-04T07:51:07Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-04T09:47:55Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Downloads/Screenshot%20from%202019-02-04%2014-30-28.png" added="2019-02-04T09:19:13Z" modified="2019-02-05T10:47:43Z" visited="2019-02-04T09:19:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-04T09:19:13Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-05T10:47:43Z" count="12"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Downloads/Screenshot%20from%202019-02-04%2014-30-58.png" added="2019-02-04T09:19:22Z" modified="2019-02-05T10:47:44Z" visited="2019-02-04T09:19:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-04T09:19:22Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-05T10:47:44Z" count="9"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2015-43-38.png" added="2019-02-04T10:13:38Z" modified="2019-02-04T10:23:06Z" visited="2019-02-04T10:13:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:13:38Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-04T10:23:06Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2015-47-38.png" added="2019-02-04T10:17:39Z" modified="2019-02-04T10:23:06Z" visited="2019-02-04T10:17:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:17:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-04T10:23:06Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2015-47-55.png" added="2019-02-04T10:17:55Z" modified="2019-02-07T05:48:50Z" visited="2019-02-04T10:17:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:17:55Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:48:50Z" count="7"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:22:10Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2015-51-02.png" added="2019-02-04T10:21:02Z" modified="2019-02-04T10:23:39Z" visited="2019-02-04T10:21:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:21:02Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-04T10:23:39Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2015-54-02.png" added="2019-02-04T10:24:02Z" modified="2019-02-07T16:31:12Z" visited="2019-02-04T10:24:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:24:02Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:12Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2015-57-00.png" added="2019-02-04T10:27:00Z" modified="2019-02-07T16:31:16Z" visited="2019-02-04T10:27:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:27:00Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:16Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-07-52.png" added="2019-02-04T10:37:52Z" modified="2019-02-07T16:31:17Z" visited="2019-02-04T10:37:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:37:52Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:17Z" count="4"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-11-59.png" added="2019-02-04T10:41:59Z" modified="2019-02-07T16:31:17Z" visited="2019-02-04T10:41:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T10:41:59Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:17Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-34-32.png" added="2019-02-04T11:04:32Z" modified="2019-02-07T16:31:18Z" visited="2019-02-04T11:04:32Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:04:32Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-35-02.png" added="2019-02-04T11:05:02Z" modified="2019-02-07T16:31:18Z" visited="2019-02-04T11:05:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:05:02Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-37-17.png" added="2019-02-04T11:07:18Z" modified="2019-02-07T16:31:20Z" visited="2019-02-04T11:07:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:07:18Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:20Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-37-24.png" added="2019-02-04T11:07:25Z" modified="2019-02-07T16:31:33Z" visited="2019-02-04T11:07:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:07:25Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:33Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-37-32.png" added="2019-02-04T11:07:32Z" modified="2019-02-07T16:31:35Z" visited="2019-02-04T11:07:32Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:07:32Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:35Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-38-08.png" added="2019-02-04T11:08:08Z" modified="2019-02-07T16:31:37Z" visited="2019-02-04T11:08:09Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:08:08Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:37Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-40-00.png" added="2019-02-04T11:10:00Z" modified="2019-02-07T16:31:38Z" visited="2019-02-04T11:10:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:10:00Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:38Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-43-34.png" added="2019-02-04T11:13:34Z" modified="2019-02-07T16:31:50Z" visited="2019-02-04T11:13:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:13:34Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:50Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2016-53-54.png" added="2019-02-04T11:23:54Z" modified="2019-02-07T16:31:51Z" visited="2019-02-04T11:23:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T11:23:54Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:51Z" count="2"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2017-53-52.png" added="2019-02-04T12:23:53Z" modified="2019-02-07T16:31:52Z" visited="2019-02-04T12:23:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T12:23:53Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:52Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2017-55-29.png" added="2019-02-04T12:25:29Z" modified="2019-02-07T16:31:53Z" visited="2019-02-04T12:25:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T12:25:29Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2017-58-50.png" added="2019-02-04T12:28:50Z" modified="2019-02-07T16:31:53Z" visited="2019-02-04T12:28:50Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T12:28:50Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-02-03.png" added="2019-02-04T12:32:04Z" modified="2019-02-07T16:31:56Z" visited="2019-02-04T12:32:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T12:32:04Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-31-14.png" added="2019-02-04T13:01:14Z" modified="2019-02-07T16:31:57Z" visited="2019-02-04T13:01:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T13:01:14Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:31:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-49-42.png" added="2019-02-04T13:19:42Z" modified="2019-02-07T16:32:01Z" visited="2019-02-04T13:19:43Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T13:19:42Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:32:01Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-49-55.png" added="2019-02-04T13:19:55Z" modified="2019-02-07T16:32:02Z" visited="2019-02-04T13:19:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T13:19:55Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:32:02Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-50-09.png" added="2019-02-04T13:20:09Z" modified="2019-02-07T16:32:03Z" visited="2019-02-04T13:20:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T13:20:09Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:32:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-50-19.png" added="2019-02-04T13:20:19Z" modified="2019-02-07T16:32:03Z" visited="2019-02-04T13:20:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T13:20:19Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:32:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-52-42.png" added="2019-02-04T13:22:42Z" modified="2019-02-07T16:32:04Z" visited="2019-02-04T13:22:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T13:22:42Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:32:04Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-04%2018-52-58.png" added="2019-02-04T13:22:58Z" modified="2019-02-07T16:32:04Z" visited="2019-02-04T13:22:58Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-04T13:22:58Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:32:04Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2010-51-38.png" added="2019-02-05T05:21:38Z" modified="2019-02-07T16:32:13Z" visited="2019-02-05T05:21:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T05:21:38Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T16:32:13Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Downloads/Introduction%20to%20Version%20Control%20&amp;%20Git.pptx" added="2019-02-05T06:51:06Z" modified="2019-02-06T14:22:40Z" visited="2019-02-05T06:51:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.presentationml.presentation"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T06:51:06Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-06T14:22:40Z" count="7"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Documents/Untitled%20Document%201" added="2019-02-05T07:09:52Z" modified="2019-02-05T07:10:09Z" visited="2019-02-05T07:09:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-05T07:10:09Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Documents/file.c" added="2019-02-05T07:11:27Z" modified="2019-02-05T07:11:28Z" visited="2019-02-05T07:11:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-05T07:11:28Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2013-02-25.png" added="2019-02-05T07:32:25Z" modified="2019-02-07T17:23:45Z" visited="2019-02-05T07:32:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T07:32:25Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T17:22:37Z" count="6"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T17:23:45Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2013-02-29.png" added="2019-02-05T07:32:29Z" modified="2019-02-07T18:09:36Z" visited="2019-02-05T07:32:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T07:32:29Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:09:36Z" count="5"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T17:23:03Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2013-02-38.png" added="2019-02-05T07:32:39Z" modified="2019-02-07T18:09:37Z" visited="2019-02-05T07:32:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T07:32:39Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:41:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:09:37Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2014-26-28.png" added="2019-02-05T08:56:28Z" modified="2019-02-07T18:09:46Z" visited="2019-02-05T08:56:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T08:56:28Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T08:57:03Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:09:46Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-00-59.png" added="2019-02-05T09:30:59Z" modified="2019-02-07T18:09:50Z" visited="2019-02-05T09:30:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T09:30:59Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T09:34:06Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:09:50Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-03-34.png" added="2019-02-05T09:33:34Z" modified="2019-02-07T18:10:02Z" visited="2019-02-05T09:33:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T09:33:34Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T09:34:06Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:02Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-44-35.png" added="2019-02-05T10:14:36Z" modified="2019-02-07T18:10:03Z" visited="2019-02-05T10:14:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:14:36Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="2"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:03Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-46-01.png" added="2019-02-05T10:16:01Z" modified="2019-02-07T18:10:09Z" visited="2019-02-05T10:16:01Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:16:01Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="2"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-51-28.png" added="2019-02-05T10:21:28Z" modified="2019-02-07T18:10:10Z" visited="2019-02-05T10:21:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:21:28Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-52-18.png" added="2019-02-05T10:22:18Z" modified="2019-02-07T18:10:12Z" visited="2019-02-05T10:22:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:22:18Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:12Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-52-54.png" added="2019-02-05T10:22:54Z" modified="2019-02-07T18:10:13Z" visited="2019-02-05T10:22:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:22:54Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:13Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-53-05.png" added="2019-02-05T10:23:05Z" modified="2019-02-07T18:10:14Z" visited="2019-02-05T10:23:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:23:05Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-53-29.png" added="2019-02-05T10:23:29Z" modified="2019-02-07T18:10:14Z" visited="2019-02-05T10:23:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:23:29Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-54-32.png" added="2019-02-05T10:24:32Z" modified="2019-02-07T18:10:16Z" visited="2019-02-05T10:24:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:24:32Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-55-01.png" added="2019-02-05T10:25:01Z" modified="2019-02-07T18:10:19Z" visited="2019-02-05T10:25:01Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:25:01Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:19Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-55-05.png" added="2019-02-05T10:25:06Z" modified="2019-02-07T18:10:22Z" visited="2019-02-05T10:25:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:25:06Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:26:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:22Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2015-58-30.png" added="2019-02-05T10:28:30Z" modified="2019-02-07T18:10:23Z" visited="2019-02-05T10:28:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:28:30Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:23Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2016-15-41.png" added="2019-02-05T10:45:41Z" modified="2019-02-07T18:10:24Z" visited="2019-02-05T10:45:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:45:41Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:46:15Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:24Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2016-20-12.png" added="2019-02-05T10:50:12Z" modified="2019-02-07T18:10:26Z" visited="2019-02-05T10:50:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T10:50:12Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-05T10:50:23Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:10:26Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Desktop/image" added="2019-02-05T11:25:04Z" modified="2019-02-05T11:25:04Z" visited="2019-02-05T11:25:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-05T11:25:04Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2020-39-03.png" added="2019-02-05T15:09:03Z" modified="2019-02-07T18:13:18Z" visited="2019-02-05T15:09:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T15:09:03Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:13:18Z" count="2"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:11:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2020-43-37.png" added="2019-02-05T15:13:37Z" modified="2019-02-07T18:27:39Z" visited="2019-02-05T15:13:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T15:13:37Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:39Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2020-48-46.png" added="2019-02-05T15:18:46Z" modified="2019-02-07T18:27:41Z" visited="2019-02-05T15:18:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T15:18:46Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:41Z" count="6"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2020-49-07.png" added="2019-02-05T15:19:07Z" modified="2019-02-07T18:27:41Z" visited="2019-02-05T15:19:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T15:19:07Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:41Z" count="10"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:14:20Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-05%2020-55-44.png" added="2019-02-05T15:25:44Z" modified="2019-02-07T18:27:42Z" visited="2019-02-05T15:25:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-05T15:25:44Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:42Z" count="11"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:21:10Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2014-04-04.png" added="2019-02-06T08:34:04Z" modified="2019-02-07T18:27:42Z" visited="2019-02-06T08:34:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T08:34:04Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:42Z" count="9"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2014-09-06.png" added="2019-02-06T08:39:06Z" modified="2019-02-07T18:27:42Z" visited="2019-02-06T08:39:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T08:39:06Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:42Z" count="13"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:22:46Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2014-10-22.png" added="2019-02-06T08:40:22Z" modified="2019-02-07T18:27:43Z" visited="2019-02-06T08:40:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T08:40:22Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:43Z" count="13"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:24:15Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2014-17-31.png" added="2019-02-06T08:47:31Z" modified="2019-02-07T18:27:43Z" visited="2019-02-06T08:47:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T08:47:31Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:43Z" count="9"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:18:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2014-22-44.png" added="2019-02-06T08:52:44Z" modified="2019-02-07T18:27:43Z" visited="2019-02-06T08:52:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T08:52:44Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:43Z" count="9"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:26:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2015-10-28.png" added="2019-02-06T09:40:28Z" modified="2019-02-07T18:27:44Z" visited="2019-02-06T09:40:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T09:40:28Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:44Z" count="7"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2015-12-34.png" added="2019-02-06T09:42:34Z" modified="2019-02-07T18:27:45Z" visited="2019-02-06T09:42:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T09:42:34Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:45Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2015-12-42.png" added="2019-02-06T09:42:42Z" modified="2019-02-07T18:28:48Z" visited="2019-02-06T09:42:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T09:42:42Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:27:46Z" count="6"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:28:48Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2015-15-25.png" added="2019-02-06T09:45:25Z" modified="2019-02-07T18:32:54Z" visited="2019-02-06T09:45:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T09:45:25Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T18:32:03Z" count="5"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T18:32:54Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2017-11-39.png" added="2019-02-06T11:41:39Z" modified="2019-02-07T07:09:25Z" visited="2019-02-06T11:41:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T11:41:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T07:09:25Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2017-12-39.png" added="2019-02-06T11:42:39Z" modified="2019-02-07T05:07:39Z" visited="2019-02-06T11:42:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T11:42:39Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:07:39Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2017-28-28.png" added="2019-02-06T11:58:28Z" modified="2019-02-07T05:07:40Z" visited="2019-02-06T11:58:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T11:58:28Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:07:40Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2018-02-49.png" added="2019-02-06T12:32:49Z" modified="2019-02-07T05:07:41Z" visited="2019-02-06T12:32:50Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T12:32:49Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:07:41Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2018-16-33.png" added="2019-02-06T12:46:33Z" modified="2019-02-07T05:38:52Z" visited="2019-02-06T12:46:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T12:46:33Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:38:52Z" count="7"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:07:40Z" count="2"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T05:28:08Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2018-21-51.png" added="2019-02-06T12:51:51Z" modified="2019-02-07T05:48:28Z" visited="2019-02-06T12:51:51Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T12:51:51Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:48:28Z" count="12"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:07:40Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T05:30:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2018-54-31.png" added="2019-02-06T13:24:31Z" modified="2019-02-07T05:48:32Z" visited="2019-02-06T13:24:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T13:24:31Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:48:32Z" count="14"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:07:40Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2018-54-38.png" added="2019-02-06T13:24:38Z" modified="2019-02-07T05:48:33Z" visited="2019-02-06T13:24:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T13:24:38Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:48:33Z" count="21"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:07:40Z" count="2"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T05:35:49Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-16-37.png" added="2019-02-06T13:46:37Z" modified="2019-02-07T05:50:08Z" visited="2019-02-06T13:46:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T13:46:37Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T05:48:56Z" count="18"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:07:40Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T05:50:08Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-16-41.png" added="2019-02-06T13:46:41Z" modified="2019-02-07T06:02:48Z" visited="2019-02-06T13:46:41Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T13:46:41Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T06:02:48Z" count="14"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:07:40Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T05:49:34Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-26-04.png" added="2019-02-06T13:56:04Z" modified="2019-02-07T06:03:46Z" visited="2019-02-06T13:56:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T13:56:04Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T06:02:48Z" count="15"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:07:40Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T06:03:46Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-31-17.png" added="2019-02-06T14:01:17Z" modified="2019-02-07T06:08:04Z" visited="2019-02-06T14:01:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T14:01:17Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T06:07:28Z" count="13"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:22:10Z" count="2"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T06:08:04Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-34-34.png" added="2019-02-06T14:04:34Z" modified="2019-02-07T06:11:45Z" visited="2019-02-06T14:04:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T14:04:34Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:22:10Z" count="2"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T06:11:45Z" count="8"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-36-22.png" added="2019-02-06T14:06:22Z" modified="2019-02-07T06:11:46Z" visited="2019-02-06T14:06:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T14:06:22Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:22:10Z" count="2"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T06:11:46Z" count="8"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T05:47:16Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-45-21.png" added="2019-02-06T14:15:21Z" modified="2019-02-07T06:13:03Z" visited="2019-02-06T14:15:21Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T14:15:21Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:22:10Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T06:11:47Z" count="6"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T06:13:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-06%2019-51-25.png" added="2019-02-06T14:21:25Z" modified="2019-02-07T06:37:56Z" visited="2019-02-06T14:21:26Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-06T14:21:25Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-06T14:22:10Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2019-02-07T06:21:28Z" count="5"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T06:37:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Desktop/AS3" added="2019-02-06T14:22:57Z" modified="2019-02-06T14:22:57Z" visited="2019-02-06T14:22:58Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-06T14:22:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Desktop/AS3.odt" added="2019-02-06T14:22:58Z" modified="2019-02-07T14:16:45Z" visited="2019-02-06T14:22:58Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.oasis.opendocument.text"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T14:16:45Z" count="42"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-07%2011-24-18.png" added="2019-02-07T05:54:19Z" modified="2019-02-07T05:54:38Z" visited="2019-02-07T05:54:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-07T05:54:19Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T05:54:38Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-08%2000-51-00.png" added="2019-02-07T19:21:00Z" modified="2019-02-07T19:21:36Z" visited="2019-02-07T19:21:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-07T19:21:00Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T19:21:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-08%2001-00-51.png" added="2019-02-07T19:30:51Z" modified="2019-02-07T19:31:07Z" visited="2019-02-07T19:30:51Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-07T19:30:51Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T19:31:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Desktop/As2" added="2019-02-07T19:31:59Z" modified="2019-02-07T19:31:59Z" visited="2019-02-07T19:31:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T19:31:59Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Desktop/As2.odt" added="2019-02-07T19:32:00Z" modified="2019-02-08T08:53:15Z" visited="2019-02-07T19:32:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.oasis.opendocument.text"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-08T08:53:15Z" count="10"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-08%2001-08-20.png" added="2019-02-07T19:38:20Z" modified="2019-02-07T19:40:03Z" visited="2019-02-07T19:38:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-07T19:38:20Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T19:40:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-08%2001-08-41.png" added="2019-02-07T19:38:41Z" modified="2019-02-07T19:41:18Z" visited="2019-02-07T19:38:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-07T19:38:41Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-07T19:41:18Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/webpage.html" added="2019-02-08T05:03:36Z" modified="2019-02-08T07:52:04Z" visited="2019-02-08T05:03:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-08T07:52:04Z" count="22"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/style.css" added="2019-02-08T06:05:38Z" modified="2019-02-08T06:08:27Z" visited="2019-02-08T06:05:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-08T06:08:27Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/webpage2.html" added="2019-02-08T06:58:24Z" modified="2019-02-08T07:04:02Z" visited="2019-02-08T06:58:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-08T07:04:02Z" count="8"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/webpage3.html" added="2019-02-08T07:34:23Z" modified="2019-02-08T07:37:42Z" visited="2019-02-08T07:34:24Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-08T07:37:42Z" count="6"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Ass4_1.html" added="2019-02-08T07:54:24Z" modified="2019-02-08T08:38:33Z" visited="2019-02-08T07:54:24Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-02-08T08:38:33Z" count="27"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Downloads/Bootcamp%202017%20-%20HTML%20&amp;%20CSS%20.pptx" added="2019-02-08T08:00:47Z" modified="2019-02-08T08:42:15Z" visited="2019-02-08T08:00:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.presentationml.presentation"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-02-08T08:00:47Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-08T08:42:15Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ttn/Pictures/Screenshot%20from%202019-02-08%2014-19-00.png" added="2019-02-08T08:49:00Z" modified="2019-02-08T08:49:14Z" visited="2019-02-08T08:49:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-02-08T08:49:00Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-02-08T08:49:14Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

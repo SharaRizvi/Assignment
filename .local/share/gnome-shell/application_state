@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="firefox.desktop" open-window-count="1" score="17553" last-seen="1549616010"/>
+    <application id="gedit.desktop" open-window-count="0" score="0" last-seen="0"/>
+    <application id="org.gnome.Nautilus.desktop" open-window-count="0" score="1234" last-seen="1549615336"/>
+    <application id="update-manager.desktop" open-window-count="0" score="0" last-seen="1549286340"/>
+    <application id="eog.desktop" open-window-count="0" score="1576" last-seen="1549565215"/>
+    <application id="org.gnome.gedit.desktop" open-window-count="0" score="855" last-seen="1549615321"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="13053" last-seen="1549616018"/>
+    <application id="org.gnome.Shell.PortalHelper.desktop" open-window-count="0" score="25" last-seen="1549566961"/>
+    <application id="libreoffice-impress.desktop" open-window-count="0" score="822" last-seen="1549615335"/>
+    <application id="libreoffice-writer.desktop" open-window-count="1" score="1567" last-seen="1549616022"/>
+    <application id="org.gnome.Software.desktop" open-window-count="0" score="6" last-seen="1549615338"/>
+  </context>
+</application-state>

@@ -1,0 +1,82 @@
+{
+  "Version": "18.04",
+  "OEM": {
+    "Vendor": "Acer",
+    "Product": ""
+  },
+  "BIOS": {
+    "Vendor": "Insyde Corp.",
+    "Version": "V1.37"
+  },
+  "CPU": {
+    "OpMode": "32-bit, 64-bit",
+    "CPUs": "4",
+    "Threads": "2",
+    "Cores": "2",
+    "Sockets": "1",
+    "Vendor": "GenuineIntel",
+    "Family": "6",
+    "Model": "61",
+    "Stepping": "4",
+    "Name": "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+    "Virtualization": "VT-x"
+  },
+  "Arch": "amd64",
+  "GPU": [
+    {
+      "Vendor": "8086",
+      "Model": "1616"
+    }
+  ],
+  "RAM": 16.3,
+  "Partitions": [
+    146.6,
+    97.9,
+    195.8
+  ],
+  "Screens": [
+    {
+      "Size": "344mmx193mm",
+      "Resolution": "1366x768",
+      "Frequency": "60.00"
+    }
+  ],
+  "Autologin": false,
+  "LivePatch": false,
+  "Session": {
+    "DE": "ubuntu:GNOME",
+    "Name": "ubuntu",
+    "Type": "x11"
+  },
+  "Language": "en_IN",
+  "Timezone": "Asia/Kolkata",
+  "Install": {
+    "Media": "Ubuntu 18.04.1 LTS \"Bionic Beaver\" - Release amd64 (20180725)",
+    "Type": "GTK",
+    "OEM": false,
+    "PartitionMethod": "manual",
+    "DownloadUpdates": true,
+    "Language": "en",
+    "Minimal": false,
+    "RestrictedAddons": true,
+    "Stages": {
+      "0": "language",
+      "82": "console_setup",
+      "83": "wireless",
+      "85": "prepare",
+      "106": "partman",
+      "144": "partman",
+      "146": "partman",
+      "189": "partman",
+      "191": "partman",
+      "209": "partman",
+      "220": "partman",
+      "223": "partman",
+      "225": "start_install",
+      "226": "timezone",
+      "229": "usersetup",
+      "240": "user_done",
+      "727": "done"
+    }
+  }
+}

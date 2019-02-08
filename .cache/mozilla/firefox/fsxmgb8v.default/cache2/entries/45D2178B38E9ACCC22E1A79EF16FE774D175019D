@@ -1,0 +1,3630 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="reportIcon" type="image/x-ico" href="/assets/Reports_Icon_Deactive-896141d49d6f806ce1b27d691a078068.png"/>
+    <link rel="icon" type="image/x-ico" href="/assets/ttnFavicon-c06e02ee158e94e25e754cb87a2328fd.ico"/>
+    <title>
+        Profile
+    </title>
+    <script type="text/javascript" src="/assets/admin-fb5834749578eea067f4c22d72ca9479.js" ></script>
+    <link rel="stylesheet" href="/assets/admin-8386afc3f4beba9a091b7e84fc0a295b.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js"></script>
+    
+
+    <!-- Steps -->
+    <script type="text/javascript" src="/assets/plugins/steps/jquery.steps.min-2580f65fb3760a283cdee8ff7bb4de38.js" ></script>
+
+    <!-- Jquery Validate -->
+    <script type="text/javascript" src="/assets/plugins/validate/jquery.validate.min-e9a063d16c14c14b29686e5758b9d78b.js" ></script>
+    <script>
+        function showError(message) {
+            $('#toast-type').text("error");
+            $('#toast-message').text(message);
+            $("#showtoast").click();
+        }
+
+        function showInfo(message) {
+            $('#toast-type').text("info");
+            $('#toast-message').text(message);
+            $("#showtoast").click();
+        }
+
+        function showSuccess(message) {
+            $('#toast-type').text("success");
+            $('#toast-message').text(message);
+            $("#showtoast").click();
+        }
+
+        function showWarning(message) {
+            $('#toast-type').text("warning");
+            $('#toast-message').text(message);
+            $("#showtoast").click();
+        }
+
+        function getResponseMap(data) {
+            var dat = JSON.stringify(data);
+            return JSON.parse(dat);
+        }
+
+        // Global Ajax events fire in
+        $(document).ajaxError(function (e, xhr, opts) {
+            if (xhr.status == 401) { // UnAuthorised Access to ajax resource
+                window.location.reload();
+                return;
+            }
+        });
+
+    </script>
+    
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103775871-6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'UA-103775871-6');
+        </script>
+    
+    <script type="text/javascript" src="/js/ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+<input type="hidden" id="emailFeedback" value="shara.rizvi@tothenew.com" />
+<input type="hidden" id="nameFeedback" value="Shara Rizvi" />
+
+<!-- The Modal -->
+<div id="profilePicShowModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('profilePicShowModal').style.display = 'none'">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+</div>
+
+<div id="profilePicUpdateModel" class="modal">
+    <span class="close" onclick="document.getElementById('profilePicUpdateModel').style.display = 'none'">&times;</span>
+
+    <div class="modal-content-updateImage">
+        <div class="col-mod-5">
+            <form action="/employee/uploadImage" method="post" name="uploadImageForm" enctype="multipart/form-data" id="uploadImageForm" >
+                <div class="imageupload panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <h3 class="panel-title pull-left">Upload Image</h3>
+                    </div>
+
+                    <div class="file-tab panel-body">
+                        <label class="btn btn-default btn-file">
+                            <span class="fileinput-new">
+                                <span><i class="fa fa-upload"></i></span>
+                            </span>
+                            <input type="file" name="file">
+                        </label>
+                        <button type="button" class="btn btn-default">Remove</button>
+                    </div>
+
+                    <div class="url-tab panel-body">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-default">Remove</button>
+                    </div>
+                    <input type="hidden" name="id" value="2324">
+                    <button type="submit" id="imageupload-submit" class="btn btn btn-success"
+                            style="margin-left: 20px;margin-bottom: 20px"><i class="fa fa-check"></i></button>
+                    <button type="button" id="imageupload-cancel" class="btn btn btn-danger"
+                            style="margin-left: 10px;margin-bottom: 20px"><i class="fa fa-times"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal DocumentWorkflowProcessModalStyle" id="helpIconModal" tabindex="-1"
+     role="dialog"
+     aria-hidden="false">
+    <div class="ibox float-e-margins" style="width: 40%;margin-left: 30%;">
+        <div class="ibox-title">
+            <h2 style="text-align: center;"><strong>Note : Profile Edit</strong></h2>
+        </div>
+
+        <div class="ibox-content">
+            <div class="table-responsive" style="font-size: 17px">
+                Please note that some of fields in this section requires submission of supporting documents as proof. Click on <img src="/assets/customIcon/Help_Icon-a6da07ff6aeb33d275535fe9cd31e7cc.png" /> to check the required documents. Please ensure that the required documents are submitted in advance in the Document Center before any changes can be made.
+                <br>
+            </div>
+
+            <div class="table-responsive">
+                <div style="float:right">
+                    <button type="button"
+                            class="btn btn-primary cancelHelpButton">Ok</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="wrapper">
+    <div id="wrapper-box">
+        <div id="toaster-msg" class="hide">
+            <span id="toast-type"></span>
+            <span id="toast-message"></span>
+            <button type="button" class="btn btn-primary" id="showtoast">Show Toast</button>
+        </div>
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <div class="updatedDetails">
+                                <span>
+    <img class="img-circle" width="48" height="48"
+         src="http://success-factor.s3.amazonaws.com/prod/profilePicFolder/6a504954-8c06-498c-9e45-f4d00d0f37d9_Shara-Rizvi-Profile-Pitcure.jpeg"/>
+</span>
+<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+    <span class="clear"><span class="block m-t-xs"><strong
+            class="font-bold">
+        Shara Rizvi
+    </strong>
+    </span>
+    </span>
+</a>
+                            </div>
+                        </div>
+
+                        <div class="logo-element">NW 2.0</div>
+                    </li>
+                    <li>
+                        <a href="/myProfile" title="My Profile"><i
+                                class="fa fa-user-o"></i> <span
+                                class="nav-label">My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile/myProfileEditHistory" title="Profile Edit History"><i
+                                class="fa fa-history"></i> <span
+                                class="nav-label">Profile Edit History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/orgChart" title="Org Chart"><i
+                                class="fa fa-sitemap"></i> <span
+                                class="nav-label">Org Chart</span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                            <a href="/attendance/myAttendance" title="My Attendance">
+                                <i class="fa fa-calendar"></i>
+                                <span class="nav-label">Attendance</span>
+                            </a>
+                        
+                        
+                    </li>
+                    
+                    
+                        <li>
+                        <a href="/importantLinks" title="Important Links"><i
+                                class="fa fa-paperclip"></i> <span
+                                class="nav-label">Important Links</span></a>
+                        </a>
+                        </li>
+                    
+
+                    
+
+                    
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    <li>
+                        <a href="/userposh" title="Prevention of Sexual Harassment Policy (POSH)  "><i
+                                class="fa fa-file-text-o"></i> <span
+                                class="nav-label">Prevention of Sexual Harassment Policy (POSH)  </span>
+                        </a>
+                    </li>
+                    
+                    
+                        <li>
+                            <a href="#" title="Insurance Details"><i class="fa fa-vcard"></i> <span
+                                    class="nav-label">
+                                Insurance Details
+                            </span><span
+                                    class="fa arrow"></span>
+                            </a>
+
+                            <ul class="nav nav-second-level collapse">
+                                
+                                <li>
+                                    <a href="/employeeInsurance/insuranceDetails" title="Insurance Details">
+                                        Feb 2019 - Jan 2020
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    
+
+
+
+                    
+
+                    
+                    
+                    <li>
+                        
+                    </li>
+                    
+                        <li><a href="/machineInfo/index"
+                               title="My Mac"><i class="fa  fa-list-alt"></i> <span
+                                    class="nav-label">My Mac</span></a>
+                        </li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <div id="msg"></div>
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                        <form action="/dashboard/index" method="post" role="search" class="navbar-form-custom userSearchLandingAction" name="userSearchForm" style="width: 500px;" id="userSearchForm" >
+                            <div class="form-group" id="searchElement">
+                                <input type="text" placeholder="Search by Email or First Name..." class="form-control"
+                                       name="query" id="top-search" autocomplete="off">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                
+                                <i class="fa fa-th" style="width: 20px;height: 20px;font-size: 16px;
+                                padding-left: 10px;"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages servDropdown">
+                                <li>
+                                    <div class="dropdown-messages-box">
+
+                                        <div class="servContainer"><a class="servLink" title="REAP" target="_blank"
+                                                                      href="http://reap.tothenew.com"><img src="/assets/customIcon/serviceDiscoveryIcons/Reap-92de7621ab27fe0f7c54a63bfb412995.png" class="servIcon"/>
+                                            <span class="servTitle" style="margin-right: 12px;">REAP</span></a></div>
+
+                                        <div class="servContainer"><a class="servLink" title="Cafeteria" target="_blank"
+                                                                      href="http://cafeteria.tothenew.com"><img src="/assets/customIcon/serviceDiscoveryIcons/Cafeteria-16152a490e640526c179be1f64a611b1.png" class="servIcon"/>
+                                            <span class="servTitle servTitleMargin"
+                                                  style="margin-right: -2px">Cafeteria</span></a>
+                                        </div>
+
+                                        <div class="servContainer"><a class="servLink" title="Learning" target="_blank"
+                                                                      href="http://learning.tothenew.com/"><img src="/assets/customIcon/serviceDiscoveryIcons/Learning-5cbba0cdff279a1cd39b8a0d8386f24d.png" class="servIcon"/>
+                                            <span class="servTitle servTitleMargin">Learning</span></a></div>
+
+                                        <div class="servContainer"><a class="servLink" title="Growth" target="_blank"
+                                                                      href="http://growth.tothenew.com/"><img src="/assets/customIcon/serviceDiscoveryIcons/Growth-c752fa7acb5dbd1edafa62d17f673f97.png" class="servIcon"/>
+                                            <span class="servTitle servTitleMargin">Growth</span></a></div>
+
+                                        <div class="servContainer"><a class="servLink" title="Reimbursement"
+                                                                      target="_blank"
+                                                                      href="http://reimbursement.tothenew.com/"><img src="/assets/customIcon/serviceDiscoveryIcons/Reimbursement-aa5f2d264ab7f8c25f0a7e56788b0df9.png" class="servIcon"/>
+                                            <span class="servTitle" style="width: 75px;">Reimbursement</span></a></div>
+                                        
+
+                                        <div class="servContainer"><a class="servLink" title="Workplace" target="_blank"
+                                                                      href="https://newers.facebook.com/"><img src="/assets/customIcon/serviceDiscoveryIcons/Workplace-0f62a450412b2ae9116a3a7047d05810.png" class="servIcon"/>
+                                            <span class="servTitle" style="width: 52px;">Workplace</span></a></div>
+                                        
+                                        <div class="servContainer" style="margin-bottom: 45px;margin-right: 11px;"><a
+                                                class="servLink" title="Referral" target="_blank"
+                                                href="http://referral.tothenew.com/"><img src="/assets/customIcon/serviceDiscoveryIcons/Referral-3045854762641941fb36ef9cdca6c1fe.png" class="servIcon"/>
+                                            <span class="servTitle" style="width: 52px;">Referral</span></a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/logout">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+<script>
+
+    $(document).ready(function () {
+
+        $("#upload_doc_form").on("submit", function (e) {
+            e.preventDefault();
+            var formData = new FormData($('#upload_doc_form')[0]);
+
+            formData.append('file', $('input[type=file]')[0].files[0]);
+
+            $.ajax({
+                type: "POST",
+                url: "/file/upload",
+                data: formData,
+                //use contentType, processData for sure.
+                contentType: false,
+                processData: false,
+                success: function (msg) {
+                    window.location.hash = "tab-4";
+                }
+            });
+        });
+    });
+</script>
+
+<input type="hidden" datatype="boolean" id="isSepInitReq" value="">
+
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Profile</h2>
+        <ol class="breadcrumb">
+            <li><a class="home" href="/">Home</a></li>
+            <li class="active">
+                <strong>
+                    Profile
+                </strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row updateBoxByAjaxFormSubmit">
+        <div class="col-md-6">
+    
+<div>
+
+
+
+
+    
+        <div class="ibox-tools">
+            
+            
+                
+                    <a custom-href="/employee/edit/2324?taskId=NEW"
+                       class="dropdown-toggle editToggleByAjax sweetAlertForConfirmation" data-toggle="dropdown"
+                       href="#">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                
+            
+            
+        </div>
+    
+
+
+
+    
+<style>
+.editable-profile-image .editToggleByAjax {
+    display: none;
+}
+
+.editable-profile-image:hover .editToggleByAjax {
+    display: inline-block;
+}
+
+</style>
+
+<div class="profile-image updateBoxByAjaxFormSubmit editable-profile-image">
+    
+        <img id="myImg" class="img-circle circle-border m-b-md custom-profile-image"
+             src="http://success-factor.s3.amazonaws.com/prod/profilePicFolder/6a504954-8c06-498c-9e45-f4d00d0f37d9_Shara-Rizvi-Profile-Pitcure.jpeg"/>
+    
+    
+        
+            <a custom-href="/employee/editProfilePic/2324"
+               class="dropdown-toggle profilePicUpload" data-toggle="dropdown"
+               href="#">
+                <i class="fa fa-edit"></i>
+            </a>
+        
+    
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('profilePicShowModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27) {
+            var model = jQuery("#profilePicShowModal");
+            modal.style.display = "none";
+        }
+    });
+</script>
+
+
+
+
+    <div class="profile-info">
+        <div class="">
+            <div>
+                <h2 class="no-margins camelCase none ">
+                    
+                        Shara Rizvi
+                    
+                </h2>
+
+                <div>
+                    
+                        <h4 class="camelCase none">Trainee</h4>
+                    
+                </div>
+                 <div class="none">
+                    <h4>shara.rizvi&#64;tothenew.com</h4>
+
+                </div>
+                <div id="employeeContact" class="none">
+                    <h4>6387890583</h4>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="movieTicketBookingCountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="m-b-0" style="text-align: center">Book Movie Tickets</h2>
+                <button type="button" class="close closePopUp" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td><label for="noOfSeatsRequired">Select number of tickets</label></td>
+                                <td>
+                                    <input type="number" id="noOfSeatsRequired" min="1">
+                                </td>
+                            </tr>
+                            </thead>
+                        </table>
+
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="nextBtnMovieTicketsPopup">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="movieTicketBookingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width: 130%">
+            <div class="modal-header">
+                <h2 class="m-b-0" style="text-align: center">Book Movie Tickets</h2>
+                <button type="button" class="close closePopUp" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/dashboard/index" method="post" >
+                    <div class="">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td><label for="employees">Select Newers (including yourself)</label></td>
+                                <td>
+                                    <select multiple  name="employees" id="employees" style="width: 40%" class="chosen-select" data-placeholder="Search by Email-Id">
+
+                                    </select>
+                                </td>
+                            </tr>
+                            </thead>
+                        </table>
+
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+
+                <button class="btn btn-primary submitBtn" id="submitBtnForMovieBooking">Submit</button>
+                <button class="btn btn-danger cancelBtn"  data-dismiss="modal" id="Cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+    })
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({placement: 'left'});
+    });
+    $(document).off('click', '.cancelMsgSnapShot')
+</script>
+</div>
+
+<div class="col-md-6">
+    
+<div>
+    <div class="ibox-tools custom-ibox-margin" >
+        
+            
+        
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table backgroundNone">
+            <tbody>
+            
+            <tr class="none">
+                <td>
+                    <strong>Legal Entity</strong>
+                </td>
+                <td>
+                    
+                        Intelligrape Software Pvt. Ltd
+                    
+                </td>
+            </tr>
+            <tr class="none">
+                <td>
+                    <strong>Business Unit</strong>
+                </td>
+                <td>
+                    
+                        Technology
+                    
+                </td>
+            </tr>
+            <tr class="none">
+                <td>
+                    <strong>Function</strong>
+                </td>
+                <td>
+                    
+                        Delivery
+                    
+                </td>
+
+            </tr>
+            <tr class="none">
+                <td>
+                    <strong>Region</strong>
+                </td>
+                <td>
+                    
+                        Ninjas
+                    
+                </td>
+            </tr>
+            <tr class="none">
+                <td>
+                    <strong>Competency</strong>
+                </td>
+                <td>
+                    
+                        AMC
+                    
+                </td>
+            </tr>
+
+            <tr class="none">
+                <td>
+                    <strong>Location</strong>
+                </td>
+                <td>
+                    Noida - 127
+                </td>
+            </tr>
+            
+            <tr class="none">
+                <td>
+                    <strong>Designation</strong>
+                </td>
+                <td>
+                    Trainee
+                </td>
+            </tr>
+            
+            
+            <tr class="camelCase none">
+                <td>
+                    <strong>Reporting Manager</strong>
+                </td>
+                <td id="employeeReportingManager">
+                    Pooja Chauhan
+                </td>
+
+            </tr>
+            <tr class="camelCase none">
+                <td>
+                    <strong>HR SPOC</strong>
+                </td>
+                <td id="employeeHrSpoc">
+                    Arzoo Sahni
+                </td>
+
+            </tr>
+            <tr class="camelCase none">
+                <td>
+                    <strong>Mentor</strong>
+                </td>
+                <td id="employeeMentoviser">
+                    
+                </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</div>
+    </div>
+    <br/>
+    <br/>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="tabs-container">
+                <ul class="nav nav-tabs">
+
+                    
+                          
+                            <li class="active">
+                                <a href="#tab-1" id="personalInfo" custom-employee-id="2324" data-toggle="tab"
+                                                  aria-expanded="true">Personal Information</a>
+                            </li>
+                          
+                        
+                            <li class="">
+                                <a href="#tab-2" id="employmentInfo" custom-employee-id="2324" data-toggle="tab"
+                                            aria-expanded="false">Employment  Information</a>
+
+                            </li>
+                        
+                        
+                        <li class="">
+                            <a href="#tab-3" id="profileDetails"  custom-employee-id="2324" data-toggle="tab" aria-expanded="false">Profile Details</a></li>
+                        
+                        
+
+                            <li class="">
+                                <a href="#tab-4" id="docCenter" custom-employee-id="2324" data-toggle="tab" aria-expanded="false">Document Center</a>
+                            </li>
+                        
+                    
+                    
+        
+                 
+                        <li class="">
+                            <a href="#tab-6" id="customTabId6" custom-employee-id="2324" data-toggle="tab"
+                               aria-expanded="false">In-Out Details</a>
+                        </li>
+                    
+            
+                </ul>
+
+                <br/>
+
+                <div class="tab-content">
+                     
+                       
+                        <div id="tab-1" class="tab-pane active">
+                            
+<div class="row">
+    <div class="col-md-6">
+        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="employeeBasicInfo">
+        <div class="ibox-title">
+        <h5>Basic Information</h5>
+
+        
+            <div class="ibox-tools">
+                
+                
+                    
+                        <a custom-href="/employeeBasicInfo/edit/2323?taskId=NEW"
+                           class="dropdown-toggle editToggleByAjax sweetAlertForConfirmation" data-toggle="dropdown"
+                           href="#">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    
+                
+            </div>
+        
+    </div>
+
+    <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr class="none" >
+                        <td class="col-sm-6"><strong>Newer ID*</strong></td>
+                        <td class="col-sm-6">
+                            
+                                3313
+                            
+                        </td>
+                    </tr>
+                    <tr class="camelCase none">
+                            
+                                <td><strong>Father's Name*</strong></td>
+                                <td>Syed Karamat Husain Rizvi</td>
+                            
+                    </tr>
+                    <tr class="none">
+                        
+                            <td><strong>Nationality*</strong></td>
+                            <td>
+                                India
+                                
+                            </td>
+                        
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Gender*</strong></td>
+                        <td>Female</td>
+                    </tr>
+
+
+                    
+
+
+                    <tr class="none">
+                        
+                            <td><strong>Marital Status*</strong></td>
+                            <td>
+                                Single
+
+                            </td>
+                        
+                    </tr>
+
+                    
+
+                    
+
+                    <tr class="none">
+                        
+                            <td class="col-sm-8"><strong>Date of Marriage</strong></td>
+                            
+                                
+                                    <td class="col-sm-4">
+
+                                    </td>
+                                
+
+                            
+                        
+                    </tr>
+
+                    
+
+                    <tr class="none">
+                        <td><strong>UAN*</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr class="none" >
+                        <td><strong>Current PF Number*</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Blood Group*</strong></td>
+                        <td>B Positive</td>
+                    </tr>
+                    
+                        
+                        
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                    
+                                
+                                
+                                    
+                                    
+                                
+                            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                    
+                                
+                                
+                                    
+                                    
+                                
+                            
+                        
+                        
+                        
+                            
+                            
+                        
+                    
+                    <tr class="none">
+                        <td><strong>T-Shirt Size</strong></td>
+                        <td>M</td>
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Any Medical History</strong>
+                        </td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({placement: 'left'});
+    });
+    $(document).off('click', '.cancelMsgBasicInfo');
+</script>
+        <div class="row">
+            <div class="col-md-12">
+                
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="socialAccountList">
+        <div class="ibox-title">
+        <h5>Social Contact Information</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+                
+                    <a custom-href="/socialAccount/edit/2324"
+                       class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="col-sm-4">Social Account Type</th>
+                <th class="col-sm-3">Social Account ID/Handle/URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+                <tr class="none">
+                    <td>Instagram</td>
+                    <td>
+                        
+                            sharafatimarizvi
+                        
+
+                    </td>
+                </tr>
+            
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#socialAccounts .add-row')
+</script>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="employeeDobInfo">
+        <div class="ibox-title">
+        <h5>DOB Information</h5>
+
+        
+            <div class="ibox-tools">
+                
+                
+                    
+                        <a custom-href="/employeeDobInfo/edit/2322?taskId=NEW"
+                           class="dropdown-toggle editToggleByAjax sweetAlertForConfirmation" data-toggle="dropdown"
+                           href="#">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    
+                
+            </div>
+        
+    </div>
+
+    <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr class="none">
+                            
+                                <td class="col-sm-8"><strong>Date of Birth (as per records)*</strong></td>
+                                <td>07-Apr-1996</td>
+                            
+                    </tr>
+                    <tr class="none">
+                         
+                                <td><strong>I prefer to receive B'day wishes on</strong>
+                                </td>
+                                <td>07-Apr</td>
+                            
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Country of Birth*</strong></td>
+                        <td>India</td>
+                    </tr>
+                    <tr class="none">
+                        <td><strong>State of Birth*</strong></td>
+                        <td>Uttar Pradesh</td>
+
+                    </tr>
+                    <tr class="camelCase none">
+                        <td><strong>Place of Birth*</br>
+                            (as per Passport/Birth Certificate)</strong>
+                        </td>
+                        <td>Safiya Nursing Home, Gola Ganj, Lucknow, UP</td>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal inmodal DocumentWorkflowProcessModalStyle" id="helpIconPopUpModal" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="ibox float-e-margins" style="width: 40%;margin-left: 30%;">
+        <div class="ibox-title">
+            <h5>Field Document</h5>
+        </div>
+
+        <div class="ibox-content">
+            <div class="table-responsive">
+                Required Documents<br><br>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>Field Name</td>
+                        <td>Document Name</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>First Name</td>
+                        <td>[Pan Card, Driving Licence, Aadhar Card, Passport, Voter ID Card]</td>
+                    </tr>
+                    <tr>
+                        <td>Middle Name</td>
+                        <td>[Pan Card, Driving Licence, Aadhar Card, Passport, Voter ID Card]</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>[Pan Card, Driving Licence, Aadhar Card, Passport, Voter ID Card]</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div style="float:right">
+                    <button type="button"
+                            class="btn btn-white cancelButton">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({placement: 'left'});
+    });
+    $(document).off('click', '.cancelMsgDOBInfo');
+</script>
+            </div>
+        </div>
+
+     
+         <div class="row">
+            <div class="col-md-12">
+                <div class="postWorkflowRefresh"
+                     custom-url="/employeeNationalIdInfo/show/2324"
+                     refreshOn="NationalIdWorkflowProcess">
+                    
+
+
+
+
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="employeeNationalIdInfoList">
+        <div class="ibox-title">
+        <h5>ID Information</h5>
+        <div class="ibox-tools floatRight">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+                
+                    <a custom-href="/employeeNationalIdInfo/edit/2324?taskId=NEW"
+                       class="dropdown-toggle editToggleByAjax sweetAlertForConfirmation" data-toggle="dropdown"
+                       href="#">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                
+            
+        </div>
+        </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID Type*</th>
+                    <th>ID Number*</th>
+                   
+                </tr>
+                </thead>
+                <tbody>
+                
+                    
+                        
+                    
+                    <tr class=" none">
+                        <td>
+                                Aadhar Card
+                            
+                        </td>
+                        <td>901328109912</td>
+                       
+                    </tr>
+                
+                    
+                        
+                    
+                    <tr class=" none">
+                        <td>
+                                PAN
+                            
+                        </td>
+                        <td>DKWPR6064N</td>
+                       
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#nationalIdInfo .add-row');
+    $(document).off('click', '.submitButton');
+    $('[data-toggle="tooltip"]').tooltip({placement: 'left'});
+
+</script>
+                </div>
+            </div>
+        </div>
+     
+        <div class="row">
+            <div class="col-md-12">
+                
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="contactInfo">
+        <div class="ibox-title">
+        <h5>Contact Information</h5>
+
+        <div class="ibox-tools">
+            
+                <a custom-href="/contactInfo/edit/2327"
+                   class="dropdown-toggle editToggleByAjax" data-toggle="dropdown"
+                   href="#">
+                    <i class="fa fa-edit"></i>
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr >
+                        <td class="col-sm-5"><strong>Business Email</strong></td>
+                        <td class="col-sm-7">
+                            shara.rizvi&#64;tothenew.com
+                        </td>
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Personal Email</strong></td>
+                        <td>shararizvi07&#64;gmail.com</td>
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Mobile Number</strong></td>
+                        <td id="contactNo">6387890583</td>
+
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("div#employeeContact").text($("#contactNo").text())
+    })
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        
+
+
+
+
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="addressList">
+        <div class="ibox-title">
+        <h5>Address Details</h5>
+        <div class="ibox-tools floatRight">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Address Type*</th>
+                    <th>Country*</th>
+                    <th>State*</th>
+                    <th>House Number*</th>
+                    <th>Street*</th>
+                    <th>Landmark*</th>
+                    <th>PIN*</th>
+                    <th>City*</th>
+                    <th>District*</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                    
+                        
+                    
+                    <tr class=" none">
+                        <td>
+                                Permanent
+                            
+                        </td>
+                        <td>India</td>
+                        <td>Uttar Pradesh</td>
+                        <td class="camelCase">178/250 K</td>
+                        <td class="camelCase">Mumtaz Mahal Compound</td>
+                        <td class="camelCase">Gola Ganj</td>
+                        <td class="camelCase">226018</td>
+                        <td class="camelCase">Lucknow</td>
+                        <td class="camelCase">Lucknow</td>
+                        <td>
+                            
+                                
+                                    <a custom-href="/address/edit/2324?taskId=NEW&amp;type=597"
+                                       class="dropdown-toggle editToggleByAjax sweetAlertForConfirmation" data-toggle="dropdown"
+                                       href="#">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                
+                            
+                        </td>
+                    </tr>
+                
+                    
+                        
+                    
+                    <tr class=" none">
+                        <td>
+                                Present
+                            
+                        </td>
+                        <td>India</td>
+                        <td>Delhi</td>
+                        <td class="camelCase">110, Bi-Amma Girls Hostel, Hall of Girls Residence (Old)</td>
+                        <td class="camelCase">Maulana Mohammad Ali Jauhar Marg</td>
+                        <td class="camelCase">Jamia Millia Islamia</td>
+                        <td class="camelCase">110025</td>
+                        <td class="camelCase">New Delhi</td>
+                        <td class="camelCase">South Delhi</td>
+                        <td>
+                            
+                                
+                                    <a custom-href="/address/edit/2324?taskId=NEW&amp;type=599"
+                                       class="dropdown-toggle editToggleByAjax sweetAlertForConfirmation" data-toggle="dropdown"
+                                       href="#">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                
+                            
+                        </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#nationalIdInfo .add-row');
+    $(document).off('click', '.submitButton');
+    $('[data-toggle="tooltip"]').tooltip({placement: 'left'});
+
+</script>
+    </div>
+</div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+               <div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="bankDetailList">
+        <div class="ibox-title">
+        <h5>Bank Details</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+
+            
+            
+                
+                    <a custom-href="/bankDetail/edit/2324?taskId=NEW"
+                       class="dropdown-toggle editToggleByAjax sweetAlertForConfirmation" data-toggle="dropdown"
+                       href="#">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                
+            
+
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Bank Name*</th>
+                    <th>Account Number*</th>
+                    <th>Branch Address*</th>
+                    <th>Newer's Name(as per Bank Account)*</th>
+                    <th>IFSC Code*</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr >
+                        <td class="none">
+                            
+                                ICICI
+                            
+                        </td>
+                        <td class="none">
+                            
+                                628401577391
+                            
+
+
+                        </td>
+                        <td class="camelCase none">
+                            
+                                6284 Sector 50 Noida Branch
+                            
+                        </td>
+                        <td class="camelCase none">
+                            
+                                Shara Rizvi
+                            
+                        </td>
+                        <td class="none">
+                            
+                                ICIC0006284
+                            
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#bankDetails .add-row')
+    $(document).off('click', '.submitButton');
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({placement: 'left'});
+    });
+
+</script>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+<script type="text/javascript">
+    $(document).off('click', '#workPermit .add-row')
+</script>
+
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="workPermitList">
+        <div class="ibox-title">
+        <h5>Work Permit Information</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+                
+                    <a custom-href="/workPermit/edit/2324"
+                       class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Visa/Work Permit Type</th>
+                        <th>Visa/Work Permit No.</th>
+                        <th>Issue Date</th>
+                        <th>Issue Place</th>
+                        <th>Issuing Authority</th>
+                        <th>Expiration Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="emergencyContactList">
+        <div class="ibox-title">
+        <h5>Emergency Contact Information (Please add atleast two emergency contacts)</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+                
+                <a custom-href="/emergencyContact/edit/2324"
+                   class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                    <i class="fa fa-edit"></i>
+                </a>
+                
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+            
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="width300">Full Name*</th>
+                    <th class="width300">Relationship*</th>
+                    <th class="width300">Is Primary Contact*</th>
+                    <th class="width300">Contact Number*</th>
+                    <th class="width300">Alternate Contact Number</th>
+                    <th class="width300">Email ID</th>
+                    <th class="width300">Emergency Contact's Address</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <td class="camelCase none">Syed Karamat Husain Rizvi</td>
+                        <td class="none">Father</td>
+                        <td class="none">Yes</td>
+                        <td class="none">9839231936</td>
+                        <td class="none">6394980558</td>
+                        <td class="none"></td>
+                        <td class="camelCase none">178/250 K, Mumtaz Mahal Compound, Gola Ganj, Lucknow, UP - 226018</td>
+                    </tr>
+                
+                    <tr>
+                        <td class="camelCase none">Touseef Raza</td>
+                        <td class="none">Friend</td>
+                        <td class="none">No</td>
+                        <td class="none">8076779056</td>
+                        <td class="none">9536840778</td>
+                        <td class="none">touseefraza29&#64;gmail.com</td>
+                        <td class="camelCase none">Village-Ahladpur, post-Fatehpur, Teh-Bilari, District-Moradabad, UP - 244001</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#emergencyContact .add-row');
+    $(document).off('click', '.submitButton');
+    $(document).ready(function () {
+        var message = $("#customError").text();
+        if(message) {showError(message)}
+    })
+</script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="dependentInformationList">
+        <div class="ibox-title">
+        <h5>Family Information</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+                
+                    <a custom-href="/dependent/edit/2324"
+                   class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                    <i class="fa fa-edit"></i>
+                </a>
+                
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+            
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="width300">Full Name*</th>
+                <th class="width300">Relationship*</th>
+                <th class="width300">Date of Birth</th>
+                <th class="width300">Family's Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                    <td class="camelCase none">Syed Karamat Husain</td>
+                    <td class="none">Father</td>
+                    <td class="none">20-Jan-1961</td>
+                    <td class="camelCase none">178/250 K, Mumtaz Mahal Compound, Gola Ganj, Lucknow, UP - 226018</td>
+                </tr>
+            
+                <tr>
+                    <td class="camelCase none">Kaneez Zehra </td>
+                    <td class="none">Mother</td>
+                    <td class="none">11-Nov-1973</td>
+                    <td class="camelCase none">178/250 K, Mumtaz Mahal Compound, Gola Ganj, Lucknow, UP - 226018</td>
+                </tr>
+            
+                <tr>
+                    <td class="camelCase none">Syed Mohd Haider</td>
+                    <td class="none">Brother</td>
+                    <td class="none">01-May-2000</td>
+                    <td class="camelCase none">178/250 K, Mumtaz Mahal Compound, Gola Ganj, Lucknow, UP - 226018</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#dependent .add-row');
+    $(document).off('click', '.submitButton');
+
+</script>
+    </div>
+</div>
+
+
+                        </div>
+                     
+                    
+
+                        <div id="tab-2" class="tab-pane ">
+                                
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div class="ibox-title">
+        <h5>Joining Information</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div id="employmentInfoAtHire">
+            <div id="joiningInfo">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="none">
+                            <td><strong>Date of Joining*</strong></td>
+                            <td>04-Feb-2019</td>
+                        </tr>
+                        <tr class="none">
+                            <td><strong>Previous Employee ID (If any)</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr class="none">
+                            <td><strong>Trainee/Intern ID (If any)</strong></td>
+                            <td></td>
+                        </tr>
+                        
+
+                        
+                        <tr class="none">
+                            <td><strong>Seniority Date</strong></td>
+                            <td>04-Feb-2019</td>
+                        </tr>
+                        <tr class="none">
+                            <td><strong>Experience prior to TTN (in months)*</strong></td>
+                            <td>0</td>
+                        </tr>
+                        
+                            <tr>
+                                <td><strong>Experience in TTN (in months)</strong></td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Experience in Legal Entity (in months)</strong></td>
+                                <td>0</td>
+                            </tr>
+                        
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div class="ibox-title">
+        <h5>Time & Attendance Information</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div id="jobTimeInfo">
+            <div id="timeAttendanceInfo">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="none">
+                            <td><strong>Holiday Calendar*</strong></td>
+                            <td>Noida Holiday Calendar</td>
+                        </tr>
+                        <tr class="none">
+                            <td><strong>Work Schedule*</strong></td>
+                            <td>Ind 5Day 9Hour WS-Sat-Sun-Off</td>
+                        </tr>
+                        
+                            <tr>
+                                <td><strong>Time Profile*</strong></td>
+                                <td>TRAINEE</td>
+                            </tr>
+                        
+                        <tr class="none">
+                            <td class="hidden"><strong>Works in Rotational Shift*</strong></td>
+                            <td class="hidden">No</td>
+                        </tr>
+                        <tr class="none">
+                            <td><strong>Shift Code*</strong></td>
+                            <td>SHC_5Day_0900_1800</td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="postWorkflowRefresh"
+                     custom-url="/jobInfo/show/2322"
+                     refreshOn="separationProcess,resignationProcess">
+                    
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div class="ibox-title">
+        <h5>Job Information</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div id="jobInfo">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr class="none">
+                        <td><strong>Employee Type*</strong></td>
+                            <td>Trainee</td>
+
+                        
+
+                    </tr>
+                    <tr class="none">
+                        
+                        
+
+                        
+                            <td><strong>Employee Status*</strong></td>
+                            <td>Active</td>
+                        
+
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Reporting Manager*</strong></td>
+                        <td id="reportingManager">Pooja Chauhan</td>
+                    </tr>
+
+                    <tr class="none">
+                        <td><strong>Career Stage*</strong></td>
+                        <td>CS1</td>
+
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Employee Level*</strong></td>
+                        <td>Trainee</td>
+
+                    </tr>
+                    <tr class="none">
+                        <td><strong>FTE*</strong></td>
+                        <td>1</td>
+
+                    </tr>
+                    <tr class="none">
+                        <td><strong>HR SPOC*</strong></td>
+                        <td id="hrSpoc">Arzoo Sahni</td>
+
+                    </tr>
+                    <tr class="none">
+                        <td><strong>Mentor*</strong></td>
+                        <td id="mentoviser"></td>
+
+                    </tr>
+                    
+                        <tr class="none">
+                            <td><strong>Training Start Date*</strong></td>
+                            <td>04-Feb-2019</td>
+                        </tr>
+                        <tr class="none">
+                            <td><strong>Training End Date*</strong></td>
+                            <td>05-Aug-2019</td>
+                        </tr>
+                        <tr>
+                    
+                    
+                        
+                    
+                        
+                    
+                    </tr>
+                    <tr>
+                        
+
+                        </tr>
+
+                        <tr>
+                            
+                            
+                                
+                                    <td><strong>Resignation Remarks</strong></td>
+                                    <td><a href="" class="loadJobInfoCommentsPopUp"
+                                           type="resignationProcess"
+                                           jobInfoId="2322"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a></td>
+                                
+                            
+
+                        </tr>
+
+                    
+
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="workflowCommentModal" tabindex="-1" role="dialog" aria-hidden="true">
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("td#employeeReportingManager").text($("#reportingManager").text())
+        $("td#employeeHrSpoc").text($("#hrSpoc").text())
+        $("td#employeeMentoviser").text($("#mentoviser").text())
+    })
+</script>
+                </div>
+            </div>
+        </div>
+
+        <div class="postWorkflowRefresh"
+             custom-url="/employmentInfoAtTerm/updateSection?employeeId=2324"
+             refreshOn="separationProcess">
+
+            
+            
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="postWorkflowRefresh"
+             custom-url="/employmentInfoAtResignation/updateSection?employeeId=2324"
+             refreshOn="resignationProcess">
+            
+                
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary workflowInitiateButton"
+                                    employeeId="2324"
+                                    entityFieldName="jobInfo.employeeStatus"
+                                    currValue="45"
+                                    newValue="54">Initiate Resignation</button>
+                        </div>
+                    </div>
+                
+            
+            
+        </div>
+
+    </div>
+</div>
+                        </div>
+                    
+
+                    
+                    <div id="tab-3" class="tab-pane  ">
+                        <div class="row">
+    <div class="col-md-12">
+        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="previousEmploymentList">
+        <div class="ibox-title">
+            <h5>Previous Employment (Please add all your previous employers)</h5>
+
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                
+                    
+                        
+                            <a custom-href="/previousEmployment/edit/2324"
+                               class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        
+                    
+                
+
+            </div>
+        </div>
+
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Start Date*</th>
+                        <th>End Date*</th>
+                        <th>Company Name*</th>
+                        
+                            <th>Last Designation*</th>
+                        
+                        <th>Type of Business</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#previousEmployment .add-row')
+</script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="formalEducationList">
+        <div class="ibox-title">
+            <h5>Formal Education (Class X onwards)</h5>
+
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                
+                    
+                        
+                            <a custom-href="/formalEducation/edit/2324"
+                               class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        
+                    
+                
+            </div>
+        </div>
+
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Education*</th>
+                        <th>Type*</th>
+                        <th>Start Year*</th>
+                        <th>End Year*</th>
+                        <th>School/ College*</th>
+                        <th>Board/ University*</th>
+                        <th>Specialization*</th>
+                        
+                            <th>%/ CGPA*</th>
+                        
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                        
+                            <tr>
+                                <td class="none">10th</td>
+                                <td class="none">Full Time</td>
+                                <td class="none">2010</td>
+                                <td class="none">2011</td>
+                                <td class="camelCase none">Cathedral Sr. Sec. School, Hazratganj, Lucknow</td>
+                                <td class="camelCase none">CBSE</td>
+                                <td class="none">Science</td>
+                                
+                                    <td class="none">7.8</td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="none">12th</td>
+                                <td class="none">Full Time</td>
+                                <td class="none">2012</td>
+                                <td class="none">2013</td>
+                                <td class="camelCase none">Cathedral Sr. Sec. School, Hazratganj, Lucknow</td>
+                                <td class="camelCase none">CBSE</td>
+                                <td class="none">Science</td>
+                                
+                                    <td class="none">77.6</td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="none">Bachelor's Degree</td>
+                                <td class="none">Full Time</td>
+                                <td class="none">2013</td>
+                                <td class="none">2016</td>
+                                <td class="camelCase none">National P G College, Lucknow</td>
+                                <td class="camelCase none">Lucknow University</td>
+                                <td class="none">Computer Science</td>
+                                
+                                    <td class="none">71.11</td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="none">PG Degree</td>
+                                <td class="none">Full Time</td>
+                                <td class="none">2016</td>
+                                <td class="none">2019</td>
+                                <td class="camelCase none">Jamia Millia Islamia</td>
+                                <td class="camelCase none">Jamia Millia Islamia</td>
+                                <td class="none">Computer Science</td>
+                                
+                                    <td class="none">9.166</td>
+                                
+                            </tr>
+                        
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#formalEducation .add-row')
+</script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="certificationList">
+        <div class="ibox-title">
+        <h5>Certifications/ Courses</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+                
+                    
+                        <a custom-href="/certification/edit/2324"
+                           class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    
+                
+
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Certification</th>
+                <th>Institution</th>
+                <th>Certification Date</th>
+                <th>Description</th>
+                <th>Valid till</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click','#certification .add-row')
+</script>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div id="courseOrWorkshopOrSeminarList">
+        <div class="ibox-title">
+        <h5>Workshops and Events Attended</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            
+                
+                    
+                        <a custom-href="/courseOrWorkshopOrSeminar/edit/2324"
+                           class="dropdown-toggle editMultiRowToggleByAjax" data-toggle="dropdown" href="#">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    
+                
+            
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Type</th>
+                <th>Institution Name</th>
+                <th>Duration</th>
+                <th>Date Completed</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+                
+                    <tr >
+                        <td class=" camelCase none">
+                            Advanced Artificial Intelligence Techniques
+
+                        </td>
+                        <td class="none">
+                            Workshop
+
+                        </td>
+                        <td class="camelCase none">
+                            Jamia Millia Islamia, New Delhi
+
+                        </td>
+                        <td class="none">
+                            1 day or less
+
+                        </td>
+                        <td class="none">
+                            24-Feb-2018
+                        </td>
+                    </tr>
+                
+                    <tr >
+                        <td class=" camelCase none">
+                            GitHub &amp; Linux
+
+                        </td>
+                        <td class="none">
+                            Workshop
+
+                        </td>
+                        <td class="camelCase none">
+                            Jamia Millia Islamia, New Delhi
+
+                        </td>
+                        <td class="none">
+                            between 1 day & 1 week
+
+                        </td>
+                        <td class="none">
+                            27-Mar-2018
+                        </td>
+                    </tr>
+                
+                    <tr >
+                        <td class=" camelCase none">
+                            Quality Engineering, Testing Trends &amp; Automation
+
+                        </td>
+                        <td class="none">
+                            Workshop
+
+                        </td>
+                        <td class="camelCase none">
+                            Institute of Technology &amp; Science, Ghaziabad
+
+                        </td>
+                        <td class="none">
+                            1 day or less
+
+                        </td>
+                        <td class="none">
+                            05-Feb-2016
+                        </td>
+                    </tr>
+                
+                    <tr >
+                        <td class=" camelCase none">
+                            Information &amp; Cyber Security
+
+                        </td>
+                        <td class="none">
+                            Workshop
+
+                        </td>
+                        <td class="camelCase none">
+                            National P G College, Lucknow
+
+                        </td>
+                        <td class="none">
+                            1 day or less
+
+                        </td>
+                        <td class="none">
+                            23-Mar-2014
+                        </td>
+                    </tr>
+                
+            
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).off('click', '#courseOrWorkshopOrSeminar .add-row')
+</script>
+    </div>
+</div>
+
+
+                    </div>
+                    
+
+                        <div id="tab-4" class="tab-pane ">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="documentCenter">
+                                        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div class="ibox-title">
+        <h5>Documents</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <div id="newerDocumentList">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="col-md-5">Document Name</th>
+                        <th class="col-md-5">File Name</th>
+                        <th class="col-md-2">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55678"/>
+                            
+                                <td class="none">PAN</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55678">3313-SHARARIZVI-PAN..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55678"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55678" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55678" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/39a5857b-ac5d-4137-a940-728fef120260_3313-SHARARIZVI-PAN..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55679"/>
+                            
+                                <td class="none">Aadhar Card</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55679">3313-SHARARIZVI-AADHARCARD..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55679"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55679" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55679" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/c7c7b298-351b-4795-a08e-b6897cde8a53_3313-SHARARIZVI-AADHARCARD..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55680"/>
+                            
+                                <td class="none">Passport</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55680"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55680"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55680" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55681"/>
+                            
+                                <td class="none">Voter ID</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55681"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55681"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55681" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55682"/>
+                            
+                                <td class="none">Driving Licence</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55682"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55682"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55682" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55683"/>
+                            
+                                <td class="none">Electricity Bill</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55683"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55683"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55683" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55684"/>
+                            
+                                <td class="none">Telephone Bill</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55684"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55684"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55684" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55685"/>
+                            
+                                <td class="none">Ration Card</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55685"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55685"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55685" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55686"/>
+                            
+                                <td class="none">Rent Agreement</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55686"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55686"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55686" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55687"/>
+                            
+                                <td class="none">Bank Statement</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55687"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55687"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55687" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55688"/>
+                            
+                                <td class="none">Bank Pass Book</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55688"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55688"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55688" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55689"/>
+                            
+                                <td class="none">Cancelled Cheque scanned copy</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55689">3313-SHARARIZVI-CHEQUESCANNEDCOPY.jpg</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55689"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55689" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55689" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="IMAGE"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/7793ef48-8efa-4588-bbb2-841bbc6e1a15_3313-SHARARIZVI-CHEQUESCANNEDCOPY.jpg"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55690"/>
+                            
+                                <td class="none">Class X Pass Certificate</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55690"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55690"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55690" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55691"/>
+                            
+                                <td class="none">Class X Marksheet</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55691">3313-SHARARIZVI-CLASSXMARKSHEET..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55691"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55691" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55691" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/92ee0530-4294-4f03-af4d-c0752a82a26e_3313-SHARARIZVI-CLASSXMARKSHEET..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55692"/>
+                            
+                                <td class="none">Class XII Pass Certificate</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55692">3313-SHARARIZVI-CLASSXIIPASSCERTIFICATE..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55692"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55692" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55692" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/8cfe2ff9-11cc-4f49-80c4-470ad007e371_3313-SHARARIZVI-CLASSXIIPASSCERTIFICATE..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55693"/>
+                            
+                                <td class="none">Class XII Marksheet</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55693">3313-SHARARIZVI-CLASSXIIMARKSHEET..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55693"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55693" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55693" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/4efa83cd-8d74-4ca3-938b-ac3ddf91c563_3313-SHARARIZVI-CLASSXIIMARKSHEET..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55694"/>
+                            
+                                <td class="none">Graduation Marksheet</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55694">3313-SHARARIZVI-GRADUATION..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55694"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55694" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55694" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/8af701ee-ce54-4f87-b533-d1444bb0d7ec_3313-SHARARIZVI-GRADUATION..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55695"/>
+                            
+                                <td class="none">Post Graduation Marksheet</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55695">3313-SHARARIZVI-POSTGRADUATION..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55695"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55695" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55695" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/36e38272-a1e5-435c-ba21-d91ed46b43fb_3313-SHARARIZVI-POSTGRADUATION..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55696"/>
+                            
+                                <td class="none">Others (Marksheets and Passing Certificates/Degree)</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55696"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55696"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55696" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55697"/>
+                            
+                                <td class="none">Birth Certificate</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55697"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55697"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55697" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55698"/>
+                            
+                                <td class="none">Relieving/Experience Letter of last employer</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55698"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55698"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55698" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55699"/>
+                            
+                                <td class="none">Certification Copy</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55699"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55699"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55699" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55700"/>
+                            
+                                <td class="none">Marriage Certificate</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55700"></a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55700"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Upload Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55700" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+                                    <img src="/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png" title="Download Document" class="iconMargin"/>
+                                    <a><img src="/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png" class="iconMargin" title="View Document"/></a>
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                        <tr>
+                            <input type="hidden" name="docId" value="55701"/>
+                            
+                                <td class="none">Resume</td>
+                            
+                            
+                                
+                                    <td><a href="/file/download/55701">3313-SHARARIZVI-RESUME..pdf</a>
+                                    </td>
+                                
+                            
+                            <td>
+                                
+
+                                    <a href="" class="loadAllComments iconMargin" title="Comment"
+                                       processKey="DocumentVerificationWorkflowProcess"
+                                       empId="2324" documentId="55701"><img src="/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png" /></a>
+                                    <img src="/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png" title="Update Document" class="workflowInitiateButton iconMargin cursor-mouse" employeeId="2324" documentId="55701" entityFieldName="documentPopup" currValue="*" newValue="*"/>
+
+                                
+                                
+
+                                    
+                                        
+                                            <a href="/file/download/55701" title="Download Document">
+                                                <img src="/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png" class="iconMargin"/></a>
+                                            <a class="document-preview" docContentType="PDF"
+                                               docUrl = "http://success-factor.s3.amazonaws.com/prod/profileDocuments/3494e4ef-03f5-4b8b-9ff6-c5cdd806b343_3313-SHARARIZVI-RESUME..pdf"><img src="/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png" class="iconMargin" title="View Document"/></a>
+
+                                        
+                                    
+
+                                
+                                
+                            </td>
+                        </tr>
+
+                    
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal inmodal" tabindex="-1" id="documentPreviewModal"
+     role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <i class="fa fa-laptop modal-icon"></i>
+                <h4 class="modal-title">Document Preview</h4>
+            </div>
+
+            <div class="modal-body">
+
+                    <div id="previewUrl">
+
+                    </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" style="float: right"
+                        data-dismiss="modal"
+                        class="btn btn-primary cancelButton ">OK</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal inmodal" id="workflowDocumentCommentModal" tabindex="-1" role="dialog" aria-hidden="true">
+</div>
+<script type="text/javascript">
+
+    $(".document-preview").on('click', function () {
+        var docUrl = $(this).attr("docUrl");
+        var docContentType = $(this).attr("docContentType")
+        if(docContentType=='IMAGE')
+        {
+             $('#previewUrl').html('<img alt="image" class="img-responsive" src='+docUrl+'>')
+        }
+        else
+        {
+            $('#previewUrl').html('<iframe src="http://docs.google.com/viewer?url='+docUrl+'&embedded=true"   class="embedFileStyle"></iframe>')
+        }
+        $('#documentPreviewModal').modal("show");
+
+    });
+    $(document).on('click', '.cancelButton', function () {
+        var taskId = $(this).parent().closest('tr').find("input").val();
+        $('#documentPreviewModal').modal("hide");
+
+    });
+    $(document).on('click', '.fileUploadSubmitButton', function () {
+        var extStatus = false
+        var ext = $('.changeFile').val().match(/\.([^\.]+)$/)[1].toLowerCase();
+        var fileSize = $(".changeFile")[0].files[0].size
+        switch (ext) {
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+            case 'doc':
+            case 'docx':
+            case 'pdf':
+                extStatus = true;
+                break;
+            default:
+                extStatus = false;
+        }
+        if (extStatus == false) {
+            showError('The selected file type is not supported. Please select another file');
+            removeSelection();
+            return false
+        }
+        if (fileSize == 0) {
+            showError('Please select a file in the given size range (1 Kb to 2 Mb)');
+            removeSelection();
+            return false
+        }
+        if (fileSize > 2000000) {
+            showError('Please select a file in the given size range (1 Kb to 2 Mb)');
+            removeSelection();
+            return false
+        }
+        return true
+    })
+    function removeSelection() {
+        $('.changeFile').val('');
+        $('.fileinput-filename').text('');
+        $('.fileUploadSubmitButton').attr('disabled', false);
+    }
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({placement: 'left'});
+    })
+</script>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                        
+<div class="ibox float-e-margins updateBoxByAjaxFormSubmit">
+    <div class="ibox-title">
+        <h5>Declined Documents</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="ibox-content">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="col-md-5">Document Name</th>
+                    <th class="col-md-5">File Name</th>
+                    <th class="col-md-2">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="hide">
+    <button type="button" id="modelPopUp" class="btn btn-primary" data-toggle="modal" data-target="#workflowCommentsModal"/>
+</div>
+
+<div class="modelWindow">
+
+</div>
+
+<script>
+    $(".document-preview").on('click', function () {
+        var taskId = $(this).parent().closest('tr').find("input[name=documentRequestId]").val();
+        $('#declinePreviewModal' + taskId).modal("show");
+
+    });
+</script>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                    
+                   
+
+                            <div id="tab-6" class="tab-pane">
+                                
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>In-Out Details</h5>
+                    <input type="hidden" id="empId" value="3313"/>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ibox-content inOutDetails">
+
+                    <div class="row">
+                        <div class="col-sm-2 m-t-sm" style="width: 15%;">
+                            
+    <div class="input-group calendarIconClick">
+        <span class="input-group-addon"><i
+                class="fa fa-calendar"></i></span>
+        
+            <input
+                    type="text" name="startDateIO" class="form-control applyDatepicker inOutCalendar" required style="100px"
+                    value="07-Feb-2019" data-date-format="dd-M-yyyy" id="" >
+        
+
+    </div>
+
+
+                        </div>
+                        <div class="col-sm-1 m-t-sm" style="width: 3%;">
+                            <h4><b>to</b></h4>
+                        </div>
+                        <div class="col-sm-2 m-t-sm" style="width: 15%;">
+                            
+    <div class="input-group calendarIconClick">
+        <span class="input-group-addon"><i
+                class="fa fa-calendar"></i></span>
+        
+            <input
+                    type="text" name="endDateIO" class="form-control applyDatepicker inOutCalendar" required style="100px"
+                    value="07-Feb-2019" data-date-format="dd-M-yyyy" id="" >
+        
+
+    </div>
+
+
+                        </div>
+                        <div class="col-sm-1 m-t-sm" style="width: 7%;">
+                            <button class="btn btn-default" style="background-color: #50C2A9;color: whitesmoke;height: 30px;line-height:0;" onclick="inOutDetails()" type="submit">GO</button>
+                        </div>
+                        <div class="col-sm-3 m-t-sm">
+                            Average Working Hours - <span id="avgWorkingHours"></span>
+                        </div>
+                        <div class="col-sm-2 m-t-sm">
+                            Total Working Days - <span id="totalWorkingDays"></span>
+                        </div>
+                            <div class="col-sm-2 m-t-sm" style="float: right;">
+                            <div id="buttons"></div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div id="dataTable-Main" style="overflow-y: auto">
+                        <table id="inOutTabTable" class="display table compact  dataTable" width="100%">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>In Time</th>
+                                <th>Out Time</th>
+                                <th>Duration</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script>
+    var dataTable
+    function formatDate(date) {
+        var monthNames = [
+            "Jan", "Feb", "March",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+        ];
+
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return day + '-' + monthNames[monthIndex] + '-' + year;
+    }
+    $(document).ready(function () {
+        $("input[name=startDateIO]").datepicker({
+            autoclose: true
+        })
+        $("input[name=endDateIO]").datepicker({
+            autoclose: true
+        })
+        var startDate = new Date();
+        var endDate = new Date();
+        startDate.setDate(endDate.getDate()-29);
+        $("input[name=startDateIO]").datepicker("setDate", formatDate(startDate))
+        $("input[name=endDateIO]").datepicker("setDate", formatDate(endDate))
+
+        $("input[name=startDateIO]").val(formatDate(startDate))
+        $("input[name=endDateIO]").val(formatDate(endDate))
+
+        inOutDetails()
+
+    });
+
+
+   function inOutDetails() {
+//       console.log($('input[name=startDateIO]').val());
+        var st =  new Date($('input[name=startDateIO]').val())
+        var et = new Date($('input[name=endDateIO]').val())
+       var startDateTime = Math.abs(st.getTime());
+       var endDateTime = Math.abs(et.getTime());
+       if (startDateTime > endDateTime) {
+            showError("The end date cannot be smaller than the start date.")
+        }else {
+       dataTable = $('#inOutTabTable').dataTable({
+           'bSort': false,
+           'ajax': {
+               url: '/dashboard/getInOutDetails',
+               data: {
+                   empId:$("#empId").val(),
+                   startDate: $('input[name=startDateIO]').val(),
+                   endDate: $('input[name=endDateIO]').val()
+               },
+               dataSrc:function (response) {
+                   $("#avgWorkingHours").text(response.avgWorkingHours)
+                   $("#totalWorkingDays").text(response.totalWorkingDays)
+                   return response.data;
+               }
+
+           },
+//           "pagingType": "full_numbers",
+//           "serverSide": true,
+           "processing": true,
+           destroy: true,
+           responsive: true,
+           dom: "ltpr"
+       });
+       var buttons = new $.fn.dataTable.Buttons(dataTable, {
+           buttons: [
+               {extend: 'csv', title: 'In-Out Details'},
+               {extend: 'excel', title: 'In-Out Details'}
+           ]
+       }).container().appendTo($('#buttons'));
+   }
+   }
+
+</script>
+
+
+                            </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal DocumentWorkflowProcessModalStyle" id="workflowProcessModal" tabindex="-1" role="dialog" aria-hidden="true">
+</div>
+
+
+<script>
+    if ("") {
+        window.location.href = "#";
+    }
+    $(document).on('click', '.profilePicUpload', function (e) {
+        var myField = $(this);
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('custom-href')
+        }).done(function (data) {
+            if (!jQuery.isEmptyObject(data)) {
+                $("#workflowProcessModal").html(data);
+                $("#workflowProcessModal").modal("show");
+            }
+        })
+    });
+    $(document).on('click','#customTabId5',function () {
+        var userActionEmployeeId  = $('input[name="userActionEmployeeId"]').val()
+        $.ajax({
+            url: '/employee/userActions',
+            type: 'GET',
+            data: {id: userActionEmployeeId}
+        }).done(function (data) {
+            var responseMap = getResponseMap(data);
+            if (responseMap.httpStatus.name == "OK") {
+                $("#tab-5").html(responseMap.data.userActionTemplate);
+              }
+
+         })
+    });
+    $(document).ready(function () {
+        var isEmploymentInfoReq = $("#isSepInitReq").val();
+
+        if (isEmploymentInfoReq=="true") {
+
+            $("#employmentInfo").click()
+        }
+    })
+
+
+</script>
+
+
+
+            <div class="footer fixed_full"><div><strong>TO THE NEW &copy; 2017</strong></div>
+            <div>
+                
+            </div>
+            <data value="[]" id="data"/>
+
+        </div>
+
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $('#top-search').typeahead({
+        ajax: '/employee/searchEmployee',
+        display: 'name',
+        onSelect: function (item) {
+            var id = item.value;
+            var url = "/employee/show/";
+            window.location.href = url + id;
+        },
+        val: 'id',
+        grepper: function (data) {
+            var that = this;
+            if (data && data.length) {
+                items = $.grep(data, function (item) {
+                    return that.matcher(item['username']) || that.matcher(item['name']) || that.matcher(item['employeeId']);
+                });
+                return items;
+            }
+            return null;
+
+        }
+
+    });
+    $('#top-search').on('keyup keypress', function (e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 13) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+
+</script>
+<script>
+
+    jQuery.fn.extend({
+        displayNotification: function () {
+            /*  var text = $(this).text();
+             var zigzagText = '';
+             var toggle = true; //lower/uppper toggle
+             $.each(text, function (i, nome) {
+             zigzagText += (toggle) ? nome.toUpperCase() : nome.toLowerCase();
+             toggle = (toggle) ? false : true;
+             });
+             return zigzagText;*/
+            alert("dsissd");
+        }
+    });
+    $(document).on('click', '.cancelHelpButton', function () {
+        $("#helpIconModal").modal("hide");
+    });
+    $(document).on('click', '.sweetAlertForConfirmation', function () {
+        $('#helpIconModal').modal("show");
+    });
+
+//    $(document).ready(function () {
+//        var data = $('#data').val();
+//
+//        $('.typeahead_3').typeahead({
+//            source: JSON.parse(data)
+//        });
+//    })
+</script>
+
+
+
+</body>
+</html>
+X*Ñ)E7           \[Ü‹@­       *    :http://newersworld.tothenew.com/myProfile strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Thu, 07 Feb 2019 07:21:40 GMT
+Content-Type: text/html;charset=UTF-8
+Server: Apache-Coyote/1.1
+X-Application-Context: application:production
+Content-Language: en-GB
+ original-response-headers Date: Thu, 07 Feb 2019 07:21:40 GMT
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: Apache-Coyote/1.1
+X-Application-Context: application:production
+Content-Language: en-GB
+ uncompressed-len 0 predictor::resource-count 28 predictor::http://newersworld.tothenew.com/assets/admin-fb5834749578eea067f4c22d72ca9479.js 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/admin-8386afc3f4beba9a091b7e84fc0a295b.css 1,1,0,4096 predictor::https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css 1,1,0,4096 predictor::https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js 1,1,0,4096 predictor::https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/plugins/steps/jquery.steps.min-2580f65fb3760a283cdee8ff7bb4de38.js 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/plugins/validate/jquery.validate.min-e9a063d16c14c14b29686e5758b9d78b.js 1,1,0,4096 predictor::https://www.googletagmanager.com/gtag/js?id=UA-103775871-6 1,1,0,4096 predictor::http://newersworld.tothenew.com/js/ckeditor/ckeditor.js 1,1,0,4097 predictor::http://newersworld.tothenew.com/assets/customIcon/Help_Icon-a6da07ff6aeb33d275535fe9cd31e7cc.png 1,1,0,4096 predictor::http://success-factor.s3.amazonaws.com/prod/profilePicFolder/6a504954-8c06-498c-9e45-f4d00d0f37d9_Shara-Rizvi-Profile-Pitcure.jpeg 1,1,0,4097 predictor::http://newersworld.tothenew.com/assets/customIcon/serviceDiscoveryIcons/Reap-92de7621ab27fe0f7c54a63bfb412995.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/serviceDiscoveryIcons/Cafeteria-16152a490e640526c179be1f64a611b1.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/serviceDiscoveryIcons/Learning-5cbba0cdff279a1cd39b8a0d8386f24d.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/serviceDiscoveryIcons/Growth-c752fa7acb5dbd1edafa62d17f673f97.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/serviceDiscoveryIcons/Reimbursement-aa5f2d264ab7f8c25f0a7e56788b0df9.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/serviceDiscoveryIcons/Workplace-0f62a450412b2ae9116a3a7047d05810.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/serviceDiscoveryIcons/Referral-3045854762641941fb36ef9cdca6c1fe.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/Comment_Icon-130676ce0b947ba89ae4a17cccb4a5ed.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/Upload_Icon-f9bb1149165aec38c46bb436c80ebc25.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/Download_Icon-8f2aa2cddd25ccd473e42a58e7638b98.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/Preview_Icon-402cd70dca62741d01d34674ea7d70ae.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/Download_Icon_Disabled-42f8d9a12921351e16d72c676c9d3523.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/customIcon/Preview-deactivate-icon-c182aeee9083c4006f47673e15cab018.png 1,1,0,4096 predictor::https://www.google-analytics.com/analytics.js 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/admin/patterns/header-profile-2a634a94d5b175c41a71fac233a52f53.png 1,1,0,4096 predictor::http://newersworld.tothenew.com/assets/fonts/fontawesome-webfont-af7ae505a9eed503f8b8e6982036873e.woff2?v=4.7.0 1,1,0,4096 predictor::https://www.google-analytics.com/r/collect?v=1&_v=j73&a=1790333033&t=pageview&_s=1&dl=http%3A%2F%2Fnewersworld.tothenew.com%2FmyProfile&ul=en-us&de=UTF-8&dt=Profile&sd=24-bit&sr=1366x768&vp=1287x639&je=0&_u=AACAAUAB~&jid=653831910&gjid=2031307090&cid=1548704928.1549093938&tid=UA-103775871-6&_gid=200323513.1549455682&_r=1&gtm=2ou1r0&z=1255557710 1,1,0,4096  (.

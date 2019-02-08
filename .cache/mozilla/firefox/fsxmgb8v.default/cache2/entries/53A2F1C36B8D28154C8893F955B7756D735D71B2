@@ -1,0 +1,447 @@
+<div class="alert" style="display: none">
+    <button type="button" class="close" ng-click="closeMe()">Ã—</button>
+    <h4 class="data"></h4></div>
+<div class="col-md-4 ">
+    <div class="box box-default">
+        <div ng-controller="userExerciseCtrl">
+
+            <div class="box-header  no-padding">
+                <div class="pull-right" ng-hide="showme==2">
+                    <a href="javascript:void 0" ng-click="showAll()" class="label label-primary small">All
+                        <span class="small ng-binding">&nbsp;({{getAllCount()}})</span></a>
+                    <a href="javascript:void 0" ng-click="showPending()"
+                       class="label label-danger small">Pending<span class="ng-binding">
+                        &nbsp;({{getPendingCount()}})
+                    </span></a>
+                    <a href="javascript:void 0" ng-click="showReview()" class="label label-waring small">Review<span
+                            class="small ng-binding">
+                        &nbsp;({{getReviewCount()}})
+                    </span></a>
+                    <a href="javascript:void 0" ng-click="showComplete()" class="label label-success small">Complete<span
+                            class="small ng-binding">
+                         &nbsp;({{getCompleteCount()}})</span></a>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li ng-class="{active:showme==1}"><a data-toggle="tab" ng-click="showme=1"
+                                                         class="tabPadding small">Exercise</a></li>
+                    <li ng-class="{active:showme==2}"><a data-toggle="tab" ng-click="showme=2"
+                                                         class="tabPadding small">Review
+                        ({{reviewExerciseCount}})
+                    </a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="myExercise" class="tab-pane fade" ng-class="{active:showme==1,in:showme==1}">
+                    <div class="box-body no-padding">
+                        <!-- small box -->
+                        <div class="box-body no-padding">
+                            <ng-include src="'session/userExercise.html'"></ng-include>
+                        </div>
+
+
+                        <div ng-show="submitingExercise">
+                            <div ng-include="'session/sessionExercise.html'"
+                                 class="control-sidebar-bg control-sidebar control-sidebar-dark" style="border-right: solid;border-color:
+              #0000ff;position:fixed !important;"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="reviewExercise" class="tab-pane fade" ng-class="{active:showme==2,in:showme==2}">
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-condensed">
+                            <tr>
+                                <th class="small">Submitted By</th>
+                                <th class="small">Exercise</th>
+                                <th class="small">Due Date</th>
+                                <th class="small">Docs</th>
+                                <th class="small">Comments</th>
+                                <th class="small">Review</th>
+                            </tr>
+                            <tr dir-paginate="reviewExercise in reviewExerciseList|filter:reviewexecise|itemsPerPage:5"
+                                pagination-id="reviewExercise.id + '-pagination-id'">
+                                <td class="small" title="{{reviewExercise.submittedByEmail}}">
+                                    {{reviewExercise.submittedBy}}
+                                </td>
+                                <td class="small"><a href="javascript:void 0"
+                                                     title="{{reviewExercise.bootCamp.name}}"
+                                                     ui-sref="sessionPage({sessionId:reviewExercise.sessionId})">{{reviewExercise.name}}</a>
+                                </td>
+                                <td class="small">{{reviewExercise.created||''|date:'dd/MM/yyyy, h:mm a'}}
+                                </td>
+                                <td class="small">
+                                    <i class="badge" ng-click="resources(reviewExercise)">{{reviewExercise.bootCampResources.length}}</i>
+                                </td>
+                                <td class="small">
+                                    <i class="badge" ng-click="comments(reviewExercise)">{{reviewExercise.comments.length}}</i>
+                                </td>
+
+                                <td class="small">
+                                        <span class="btn btn-primary btn-xs openSidebar small"
+                                              ng-click="submitReviewExercise(reviewExercise)">Review</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div ng-show="submitingReviewExercise">
+                            <div ng-include="'session/reviewExercise.html'"
+                                 class="control-sidebar-bg control-sidebar control-sidebar-dark"
+                                 style="border-right: solid;border-color: #0000ff;
+        position: fixed !important;"></div>
+                        </div>
+                        <div class="box-footer no-padding">
+                            <div ng-hide="reviewExerciseList||noreviewExerciseList">   <span
+                                    class="fa fa-refresh fa-spin"
+                                    ng-hide="reviewExerciseList||noreviewExerciseList"></span>Loading...
+                            </div>
+                            <dir-pagination-controls pagination-id="reviewExercise.id + '-pagination-id'"
+                                                     max-size="50"
+                                                     direction-links="true"
+                                                     boundary-links="true">
+                            </dir-pagination-controls>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-container modalresource">
+
+                    <div class="modal modalresource">
+                        <div class="showModal"
+                             style="font-size: 100%;width:40%;margin: 0 auto;margin-top: 6%">
+                            <div class="pull-right">
+                                <a class="btn close-modal"><i class="fa fa-close"></i></a>
+                            </div>
+                            <div class="table-responsive no-padding">
+                                <br>
+
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th class="small">Resource Name</th>
+                                        <th class="small">Date Uploaded</th>
+                                        <th class="small">delete</th>
+
+                                    </tr>
+
+                                    <tr ng-repeat="resource in resourceList|orderBy:'dateCreated':reverse">
+
+                                        <td class="small"><a href="javascript:void(0)" ng-click="download(resource)"
+                                                             title="download">{{resource.name}}</a>
+                                        </td>
+                                        <td class="small">
+                                            {{showLocaleDate(resource.dateCreated)|date:'dd/MM/yyyy, h:mm a'}}
+                                        </td>
+                                        <td class="small">
+                                            <a href="javascript:void(0)" ng-click="deleteResource(resource)">
+                                                <i class="fa fa-trash-o" style="color: red"></i>
+                                            </a>
+                                        </td>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-container commentsModal"
+                     ng-include="'user/userExerciseCommentDetails.html'">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box box-default">
+        <div ng-controller="quizPanelCtrl">
+            <ng-include src="'quiz/user_quiz_details.html'"></ng-include>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 ">
+    <div class="box box-default">
+
+        <div class="box-header with-border">
+            <h3 class="box-title with-border">Trainings</h3>
+        </div>
+
+        <div class="box-body table-responsive no-padding ">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="small">Name</th>
+                    <th class="small hidden-xs">Duration(Hours)</th>
+                    <th class="small hidden-xs">Sessions</th>
+                    <th class="small" colspan="2">Practice</th>
+                </tr>
+                <tr dir-paginate="bootcamp in  upcomingBootcamp.bootcamps|filter:search|itemsPerPage:10"
+                    pagination-id="enrolled">
+                    <td class="small"><a href="#" ng-click="upcomingBootcamp.getDetails(bootcamp)"
+                                         id="bootcamp_{{bootcamp.id}}" class="bootcamp wrap">{{bootcamp.name}}</a>
+                    </td>
+                    <td class="small hidden-xs">
+                        <a  ui-sref="showBootcamp({id: bootcamp.id})"  title="Show details" target="_blank">
+                            {{upcomingBootcamp.showLocaleDate(bootcamp.startDate)|date:'dd/MM/yyyy'}} -
+                            {{upcomingBootcamp.showLocaleDate(bootcamp.endDate)|date:'dd/MM/yyyy'}}
+                        </a>
+                    </td>
+                    <td class="small hidden-xs">
+                        <a ui-sref="sessionList({bootcampId:bootcamp.id})">{{bootcamp.sessionCount}}</a>
+                    </td>
+                    <td class="small">{{bootcamp.practiceName}}</td>
+                    <td ng-hide="upcomingBootcamp.isPublicUser">
+                        <div ng-hide="bootcamp.isEnroll || upcomingBootcamp.isOver(bootcamp.startDate)">
+                            <button class="btn btn-primary btn-xs"
+                                    data-ng-show="(!bootcamp.visibility || !(bootcamp.visibility=='PRIVATE'))"
+                                    ng-click="upcomingBootcamp.enrollMe(bootcamp)">
+                                Enroll
+                            </button>
+                            <button class="btn btn-primary btn-xs" data-ng-show="bootcamp.visibility=='PRIVATE'"
+                                    ng-click="upcomingBootcamp.requestMe(bootcamp)">
+                                Request
+                            </button>
+                        </div>
+                        <i class="badge bg-maroon-active small wrap" ng-show="bootcamp.isEnroll"
+                           title="Mentor : {{bootcamp.mentorEmail}}">{{bootcamp.mentor}}</i>
+                    </td>
+                </tr>
+            </table>
+            <div class="box-footer no-padding">
+                <div ng-hide="upcomingBootcamp.nodata|| upcomingBootcamp.bootcampList"
+                     class="overlay">   <span
+                        class="fa fa-refresh fa-spin"
+                        ng-hide=" upcomingBootcamp.bootcampList||upcomingBootcamp.nodata"></span>Loading...
+                </div>
+                <dir-pagination-controls pagination-id="enrolled" max-size="50" direction-links="true"
+                                         boundary-links="true"></dir-pagination-controls>
+
+            </div>
+
+        </div>
+
+        <div class="modal-container" id="modal-container2">
+            <div class="modal" id="modal2">
+                <div class="showModal">
+                    <div class="pull-right">
+                        <a class="btn" ng-click="upcomingBootcamp.close()"><i class="fa fa-close"></i></a>
+                    </div>
+
+                    <div>
+                        <br>
+
+                        <table class="table table-bordered no-padding">
+                            <th class="small">Resource Name</th>
+                            <th class="small">Uploaded Date</th>
+                            <tr ng-repeat="resource in upcomingBootcamp.resources|orderBy:'dateCreated':reverse">
+                                <td class="small">
+                                    <a href="javascript:void(0)" ng-click="upcomingBootcamp.download(resource)"
+                                       title="download">
+                                        {{resource.name}}
+                                    </a>
+                                </td>
+                                <td class="small">
+                                    {{upcomingBootcamp.showLocaleDate(resource.dateCreated)|date:'MM/dd/yyyy, h:mma'}}
+                                </td>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal-containerSessionExerciseAndDescription">
+            <div class="modal" id="modalSessionExerciseAndDescription">
+                <div class="showModal" id="preTagExercise"
+                     style="font-size: 100%;margin-top:5%;margin-left: 15%;position: relative;width:60%;overflow-y:
+                 scroll;">
+                    <div>
+                        <b>{{upcomingBootcamp.info}} : </b><b>{{upcomingBootcamp.name}}</b>
+                        <a class="btn" ng-click="upcomingBootcamp.close()" style="float:right"><i
+                                class="fa fa-close"></i></a>
+                    </div>
+                    <pre> {{upcomingBootcamp.sessionData}}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="bootcampDetails">
+            <div class="modal-dialog">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Modal title</h3>
+
+                        <div class="box-tools">
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <a href="{{url}}/bootCamp/downloadPdf?id={{upcomingBootcamp.bootCamp.id}}"
+                               class="btn btn-sm btn-flat btn-success" style="float: right;margin-right: 10px"
+                               title="Download pdf" target="_blank">
+                                <i class="fa fa-file-pdf-o" style="font-size: 14px"></i></a>
+                            <a target="_top" class="btn btn-sm btn-flat btn-info mailTo" href="mailTo:test">
+                                <span class="glyphicon glyphicon-envelope"></span></a>
+                        </div>
+
+                    </div>
+                    <div class="box-body">
+                        <p>One fine body&hellip;</p>
+
+                    </div>
+                    <div class="box-footer">
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+        <!-- Bootcamp detail modal-->
+
+    </div>
+
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Knowledge Sharing </h3>
+        </div>
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th class="small">Name</th>
+                    <th class="small">Start Date</th>
+                    <th class="small">Duration(Hours)</th>
+                    <th colspan="2" class="small">Practice</th>
+                </tr>
+                <tr dir-paginate="session in upcomingBootcamp.knowledgeMeetSessionList|filter:search|itemsPerPage:10">
+                    <td class="small">
+                        <a ui-sref="sessionPage({sessionId:session.id})" class="bootcamp wrap" title="Show details">{{session.name}} </a>
+                    </td>
+                    <td class="small">
+                        {{upcomingBootcamp.showLocaleDate(session.start)|date:'MM/dd/yyyy, h:mm a'}}
+                    </td>
+                    <td class="small">
+                        {{session.duration}}
+
+                    </td>
+                    <td class="small">{{session.practice}}</td>
+                    <td ng-hide="upcomingBootcamp.isPublicUser">
+                        <button ng-show="session.sessionAttendance" class="btn btn-danger btn-xs"
+                                data-toggle="modal"
+                                data-target="#unJoinSession">
+                            Unjoin
+                        </button>
+                        <button ng-hide="session.sessionAttendance" class="btn btn-primary btn-xs"
+                                ng-click="upcomingBootcamp.joinSession(session)">
+                            Join
+                        </button>
+                        <div class="modal fade" id="unJoinSession" tabindex="-1" role="dialog"
+                             aria-labelledby="unJoinSession"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="unJoinSessionLabel"><strong>Unjoin
+                                            Session/Cancel
+                                            Seat</strong></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="reason" class="form-control-label">Please Mention Reason
+                                                    For
+                                                    The Same:</label>
+                                                <textarea class="form-control" id="reason" ng-model="reason"
+                                                          required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="submit" class="btn btn-primary"
+                                                    ng-click="upcomingBootcamp.unJoinSession(session,reason)">Confirm
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="box-footer clearfix">
+                <div ng-hide="upcomingBootcamp.nodata||upcomingBootcamp.knowledgeMeetSessionList" class="overlay">   <span
+                        class="fa fa-refresh fa-spin"
+                        ng-hide="upcomingBootcamp.knowledgeMeetSessionList||upcomingBootcamp.nodata"></span>Loading...
+                </div>
+                <dir-pagination-controls
+                        max-size="50"
+                        direction-links="true"
+                        boundary-links="true">
+                </dir-pagination-controls>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Events </h3>
+        </div>
+
+        <div class="box-body table-responsive no-padding ">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="small">Name</th>
+                    <th class="small">Date</th>
+                    <th class="small">Sessions</th>
+                    <th colspan="2" class="small">Practice</th>
+                </tr>
+                <tr dir-paginate="eventBootCamp in  upcomingBootcamp.eventBootCamps|filter:search|itemsPerPage:10"
+                    pagination-id="enrolled">
+                    <td class="small"><a
+                            ui-sref="viewEvent({id:eventBootCamp.id})"
+                            class="bootcamp  wrap">{{eventBootCamp.name}}</a>
+                    </td>
+                    <td class="small">
+                        <a href="#" title="Show details">
+                            {{upcomingBootcamp.showLocaleDate(eventBootCamp.startDate)|date:'MM/dd/yyyy'}}
+                        </a>
+                    </td>
+                    <td class="small">
+                        <a ui-sref="sessionList({bootcampId:eventBootCamp.id})">{{eventBootCamp.sessionCount}}</a>
+                    </td>
+                    <td class="small">{{eventBootCamp.practiceName}}</td>
+                </tr>
+            </table>
+            <div class="box-footer no-padding">
+                <div ng-hide="upcomingBootcamp.nodata|| upcomingBootcamp.eventBootCamps"
+                     class="overlay">   <span
+                        class="fa fa-refresh fa-spin"
+                        ng-hide=" upcomingBootcamp.eventBootCamps||upcomingBootcamp.nodata"></span>Loading...
+                </div>
+                <dir-pagination-controls pagination-id="enrolled" max-size="50" direction-links="true"
+                                         boundary-links="true"></dir-pagination-controls>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 ">
+    <div class="box box-default" ng-controller="MainCtrl">
+        <div ui-calendar="uiConfig.calendar" class="span8 calendar " id="cal" ng-model="eventSources">
+        </div>
+    </div>
+</div>
+ÜoÌM’d           \[Ü—@­\[ç¶   1    :http://learning.tothenew.com/home/dashboard.html strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Thu, 07 Feb 2019 07:21:59 GMT
+Content-Type: text/html
+Content-Length: 22806
+Server: Apache-Coyote/1.1
+Accept-Ranges: bytes
+ETag: W/"22806-1549495644000"
+Last-Modified: Wed, 06 Feb 2019 23:27:24 GMT
+ original-response-headers Date: Thu, 07 Feb 2019 07:21:59 GMT
+Content-Type: text/html
+Content-Length: 22806
+Connection: keep-alive
+Server: Apache-Coyote/1.1
+Accept-Ranges: bytes
+ETag: W/"22806-1549495644000"
+Last-Modified: Wed, 06 Feb 2019 23:27:24 GMT
+ uncompressed-len 0   Y
