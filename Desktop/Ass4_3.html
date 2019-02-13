@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Search Study Companion</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+     </head>
+     <style>
+      #companyLogo
+      {
+      	color:#00b386;
+      	margin-left: 100px;
+      }
+     .tabs
+     {
+     	display: inline-flex;
+     	list-style-type:none;
+     	padding: 10px;
+     	float: right;
+     	margin-top:-50px;
+     	margin-right:90px;
+     	font:10px "Open Sans",sans-serif;
+     }
+     li
+     {
+     	padding-left: 20px;
+     	color:#00b386;
+     	font: 18px "Open Sans",sans-serif;
+     }
+     .formCotainer
+     {
+     	width:50%;
+     	height:57.7vw;
+     	margin-left:26.5vw;
+     	border:2px solid #C8C8C8;
+     	border-radius:10px;
+     }
+     .navOfFrom
+      {
+         width:49.49%;
+         position: absolute;
+         color: black;
+         background-color:#C8C8C8;
+         height: 5vw;
+         border-radius: 6px 6px 0px 0px;
+           }
+       #BugReport
+       {
+          margin-left:30px;
+          color:white;
+          font-weight: bold;
+         }    
+        .formGroup
+         {
+           
+           width:86%;
+           color:gray;
+           font: 16px "Open Sans",sans-serif;
+           padding:20px 30px 20px 40px;
+             } 
+        input[type="text"],select
+        {
+           width:100%; 
+           border: 2px solid gray;
+           border-radius: 5px;
+           display: inline-block;
+           padding: 10px;
+            }    
+
+          select{
+          	padding-left:20px;
+          	background-color: #00b386;
+          	border-color:#00b386;
+          	width: 103.89%;
+          }  
+        textarea
+        {
+        width:100%; 
+           border: 2px solid gray;
+           border-radius: 5px;
+           display: inline-block;
+           padding: 10px;	
+        }    
+        label{
+        	display: inline-block;
+        	font-weight:500;
+        	margin-top:10px;
+        }  
+       #free{
+           
+            padding: 30px 0px 10px 0px;
+        }  
+        #Business
+        {
+        	margin-left:240px;
+        } 
+        .footerOfForm
+         {
+             width: 116%;
+             height: 5vw;
+             background-color:#C8C8C8;
+     	     border:2px solid #C8C8C8;
+     	     border-radius: 0px 0px 5px 5px;
+     	     margin-top:20px;
+     	     margin-left: -40px;}
+     	  input[type="button"] {
+           width:13%; 
+           border: 2px solid #C8C8C8;
+           border-radius:10px;
+           display: inline-block;
+           color: white;
+           font-weight: bold;
+           margin:20px 35px 0px 0px;
+           font-size:16px;
+           background-color: #00b386;
+           padding: 10px;
+           display:inline;
+           float:right;
+                }  
+             select{
+             	font-weight: bold;
+             	color:white;
+             }  
+               
+           .inputfile
+           {
+           	  width:100%; 
+           border: 2px solid #00b386;
+           border-radius: 5px;
+           display: inline-block;
+           padding: 10px;
+           background-color: #00b386; 
+           color:white;
+           font-weight: bold;
+	       
+           }
+
+               
+               }            
+    </style>
+ <body>
+ 	<div class="container">
+     <nav class="nav1">
+     	<h1 id="companyLogo">TO THE NEW<h1>
+     		<UL class="tabs"><li>Home</li>
+     			<li><a link="">Quick</a></li>
+     		    <li><a link="">Help</a></li>
+     		</UL>
+     </nav> 
+    <hr style="width:87%;color:gray;margin-left:100px;">
+    <div class="formCotainer">
+       <div class="navOfFrom">
+        <h1 id="BugReport">Bug report</h1>
+        <form class="formGroup" action="#">
+        
+        <label>Title:*</label><input type="text" name="title">
+        <label style="margin-top:10px;">Description:*</label>
+        <textarea cols="100" rows="10"></textarea>
+        <label>Operating System:</label>
+        <select>
+          <option value="Windows">Microsoft Windows</option>
+          <option value="Ubuntu">Ubuntu</option>
+          <option value="Kali linux">Kali linux</option>
+          <option value="Mac Os">Apple macOS</option>
+          <option value="Mac Os">Mac OS</option>
+       </select>
+       <label>Product:*</label>
+       <select>
+          <option value="Windows">Paramoid</option>
+          <option value="Ubuntu">Ubuntu</option>
+          <option value="Kali linux">Kali linux</option>
+          <option value="Mac Os">Apple macOS</option>
+          <option value="Mac Os">Mac OS</option>
+       </select>
+       <label>Version:*</label><br>
+       <input type="text" name="Version" style="width:20%"><br>
+       <label>License:</label><br>
+       <input id="free" type="radio" name="Free" value="Free">Free
+       <input id="Business" type="radio" name="Business" value="Business">Business<br>
+       <label>Severitry</label>
+       <select>
+          <option value="Windows">Paramoid</option>
+          <option value="Ubuntu">Ubuntu</option>
+          <option value="Kali linux">Kali linux</option>
+          <option value="Mac Os">Apple macOS</option>
+          <option value="Mac Os">Mac OS</option>
+       </select>
+       <label>Attachments:</label><br> 
+       <input type="file" name="file" id="file" class="inputfile" />
+        <div class="footerOfForm">
+         <input type="button" name="send" value="send">
+        </div>
+       </form>
+    </div>
+ 	</div>
+ </body>
