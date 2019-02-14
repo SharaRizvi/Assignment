@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<title>
+			Employee
+		</title>
+		<style type="text/css">
+		</style>
+		<script>
+			arr=[{},{},{},{}];
+			arr[0]  = { "name":"Shara", "age": "23", "salary":"30000", "DOB":new Date(1995,4,7)};
+			arr[1]  = { "name":"Nargis", "age": "33", "salary":"30000", "DOB":new Date(1995,3,29)};
+			arr[2]  = { "name":"Touseef", "age": "22", "salary":"3000", "DOB":new Date(1995,11,17)};
+			arr[3]  = { "name":"Nouman", "age": "44", "salary":"500", "DOB":new Date(1993,2,5)};
+
+
+
+			function showemp(){
+				var str="";
+				arr.forEach(function(emp){
+					str=str+"Name: "+emp.name+", Age: "+emp.age+", Salary: "+emp.salary+", DOB:"+emp.salary+"<br/>";
+				});
+				document.getElementById("emp").innerHTML=str;
+			}
+
+
+
+
+
+			function filtersalary(event){
+    				return event.salary> 5000;
+			}
+			var highsalary=arr.filter(filtersalary);
+			var str=[];
+			var i=0;
+			highsalary.forEach(function (arrayItem) {
+    			str[i] = arrayItem.name;
+    			i++;
+			});
+			str.join(", ");
+			function gethighsal(){
+        		document.getElementById("result").innerHTML = " "+str;
+        	}
+
+
+
+
+        	function group18to25(event){
+    				return event.age>=18 && event.age<=25;
+			}
+			function group26to35(event){
+    				return event.age>=26 && event.age<=35;
+			}
+			function group36to50(event){
+    				return event.age>=36 && event.age<=50;
+			}
+			function groupabove50(event){
+    				return event.age>50;
+			}
+			var g18to25=arr.filter(group18to25);
+			var str1=[];
+			i=0;
+			g18to25.forEach(function (arrayItem) {
+    			str1[i] = arrayItem.name;
+    			i++;
+			});
+			str1.join(", ");
+			var g26to35=arr.filter(group26to35);
+			var str2=[];
+			i=0;
+			g26to35.forEach(function (arrayItem) {
+    			str2[i] = arrayItem.name;
+    			i++;
+			});
+			str2.join(", ");
+			var g36to50=arr.filter(group36to50);
+			var str3=[];
+			i=0;
+			g36to50.forEach(function (arrayItem) {
+    			str3[i]= arrayItem.name;
+    			i++;
+			});
+			str3.join(", ");
+			var gabove50=arr.filter(groupabove50);
+			var str4=[];
+			i++;
+			gabove50.forEach(function (arrayItem) {
+    			str4[i] = arrayItem.name;
+    			i++;
+			});	
+			str4.join(", ");
+			function getagegroups(){
+				if(str1.length==0)
+					str1="No employee in this age group";
+				if(str2.length==0)
+					str2="No employee in this age group";
+				if(str3.length==0)
+					str3="No employee in this age group";
+				if(str4.length==0)
+					str4="No employee in this age group";
+				document.getElementById("g1").innerHTML = "Group1: 18-25-> "+str1;
+        		document.getElementById("g2").innerHTML = "Group2: 26-35-> "+str2;
+        		document.getElementById("g3").innerHTML = "Group3: 36-50-> "+str3;
+        		document.getElementById("g4").innerHTML = "Group4: Above 50-> "+str4;
+        	}
+
+
+
+
+
+        	function fetche(event){
+    				return event.age>20 && event.salary<1000;
+			}
+        	var femployee=arr.filter(fetche);
+			str5="";
+			femployee.forEach(function (arrayItem) {
+    			str5 = "Name: "+arrayItem.name+", Initial Salary: "+arrayItem.salary;
+    			i++;
+			});	
+			str5.join(", ");
+			function fetchemployee(){
+					arr.forEach(function (arrayItem) {
+					if(arrayItem.salary<1000&&arrayItem.age>20){
+    					var out=arrayItem.salary*5;
+    					arrayItem.salary=out;
+    				}
+				});	
+				document.getElementById("g5").innerHTML = " "+str5;
+				console.log(arr);	
+			}
+        </script>
+	</head>
+	<body onload="showemp()">
+		<br/>
+		<h2>Employee details are:</h2>
+		<label id="emp" style="color: green"></label>
+		<br/>
+		<br/>
+		<I>Click <button onclick="gethighsal()">here</button> for all employees with salary greater than 5000. </I><br/>
+		<label id="result" style="color: green"></label><br/><br/>
+		<I>Click <button onclick="getagegroups()">here</button> to group employee on the basis of their age. </I><br/>
+		<label id="g1" style="color: green"></label><br/>
+		<label id="g2" style="color: green"></label><br/>
+		<label id="g3" style="color: green"></label><br/>	
+		<label id="g4" style="color: green"></label><br/>	</br/>
+		<I>Click <button onclick="fetchemployee(), showemp()	">here</button> to fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary. Check updated value in the table above.</I><br/>
+		<label id="g5" style="color: green"></label>
+	</body>
+</html>

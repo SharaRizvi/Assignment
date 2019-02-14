@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>
+			Simple Interest	
+		</title>
+		<style type="text/css">
+			button{
+				width:20%;
+			}
+		</style>
+		<script>
+			var p, r, t;
+			function insertAmount(){
+				p = prompt("Please enter amount");
+				if(isNaN(p))
+        		{
+        			alert("Please only enter numeric characters only for amount! (Allowed input:0-9)");
+        			insertAmount();
+        		}
+        		return;
+        	}
+        	function insertRate(){
+				r = prompt("Please enter rate");
+				if(isNaN(r))
+        		{
+        			alert("Please only enter numeric characters only for amount! (Allowed input:0-9)");
+        			insertRate();
+        		}
+        		return;
+        	}
+        	function insertYear(){
+				t = prompt("Please enter years");
+				if(isNaN(t))
+        		{
+        			alert("Please only enter numeric characters only for amount! (Allowed input:0-9)");
+        			insertRate();
+        		}
+        		return;
+        	}
+        	function CalculateSI(){
+				if(isNaN(p)||isNaN(r)||isNaN(t))
+        		{
+        			alert("Enter all the values first");
+        			return;
+        		}
+        		si=p*r*t/100;
+        		document.getElementById("result").innerHTML = "Rs. "+si+" is the SI and total amount is Rs. "+(p+si);
+        		return;
+        	}
+        </script>
+	</head>
+	<body>
+		<br/>
+		<br/>
+		<div>
+		<center>
+		<button onclick="insertAmount()">Insert Amount</button>&nbsp;&nbsp;&nbsp;
+		<button onclick="insertRate()">Insert Rate</button>&nbsp;&nbsp;&nbsp;
+		<button onclick="insertYear()">Insert Year</button>
+		</center>
+		</div>
+		<br/>
+		<center><button onclick="CalculateSI()" style="height: 50px">Calculate SI</button><center>
+		<br/>
+		<center><h2><label id="result" style="color: green"></label></h2></center>
+	</body>
+</html>

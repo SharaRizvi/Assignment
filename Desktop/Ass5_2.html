@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+			Pallindrome
+		</title>
+		<style type="text/css">
+			button{
+				width:20%;
+			}
+		</style>
+		<script>
+			var p, r, t;
+        	function pallindrome(){
+				str=prompt("Enter a String");
+				var j=str.length-1;
+				var ispallindrome=true;
+        		for (var i = 0; i < str.length; i++) {
+  					if(str.charAt(i)!=str.charAt(j))
+  						ispallindrome=false;
+  					j--;
+				}
+				if(ispallindrome)
+        			document.getElementById("result").innerHTML = str+" is a pallindrome.";
+        		else
+        			document.getElementById("result").innerHTML = str+" is not a pallindrome.";
+        		return;
+        	}
+        </script>
+	</head>
+	<body onload="pallindrome()">
+		<br/>
+		<br/>
+		<br/>
+		<center><h2><label id="result" style="color: green"></label></h2></center>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>
+			Copy Object
+		</title>
+		<style type="text/css">
+		</style>
+		<script>
+			var obj = { "name":"Shara", "competency": "AMC"};
+        	var obj1={};
+        	function printObj(){
+        		str="";
+        		for(var i in obj) str=str+i+": "+obj[i]+" "; 
+        		document.getElementById("result").innerHTML = str;
+        		return;
+        	}
+        	function copyObj(){
+        		for(var i in obj)	obj1[i]=obj[i];
+        		console.log(obj1);
+        		return;
+        	}
+        </script>
+	</head>
+	<body onload="printObj()">
+		<br/>
+		<br/>
+		<br/>
+		<center><h2>obj: <label id="result" style="color: green"></label></h2></center>
+		<center>Click <button onclick="copyObj()">here</button> to copy this object and print on console.</center>
+	</body>
+</html>
