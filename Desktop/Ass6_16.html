@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Row Delete
+		</title>
+		<style type="text/css">
+			table{
+				border: 1px solid black; 
+				width:100%;
+				text-align: center; 
+				height: 30px; 
+			}
+			tr{
+				background-color: pink;
+			}
+			h2{
+				text-align: center;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		using jsonplaceholder site as my server as we don't have server of our own and system files cannot be used as servers
+		<br/><br/>
+		<h2>Click on X to delete that row</h2>
+			<table >
+				<tr>
+					<th>ID</th>
+					<th>Employee Name</th>
+					<th>Designation</th>
+					<th>Department</th>
+					<th></th>
+				</tr>
+				<tr class="tr1" name='1'>
+					<td>101</td>
+					<td>Shara Rizvi</td>
+					<td>Trainee</td>
+					<td>AMC</td>
+					<td><button id="1">X</button></td>
+				</tr>
+				<tr class="tr2" name='2'>
+					<td>102</td>
+					<td>Nargis Tarannum</td>
+					<td>Software Developer</td>
+					<td>PHP</td>
+					<td><button id="2">X</button></td>
+				</tr>
+				<tr class="tr3" name='3'>
+					<td>103</td>
+					<td>Nouman Khan</td>
+					<td>Senior Developer</td>
+					<td>Ionic</td>
+					<td><button id="3">X</button></td>
+				</tr>
+				<tr class="tr4" name='4'>
+					<td>104</td>
+					<td>Nabeela Rizvi</td>
+					<td>Project Manager</td>
+					<td>C++</td>
+					<td><button id="4">X</button></td>
+				</tr>
+				<tr class="tr5" name='5'>
+					<td>105</td>
+					<td>Touseef Raza</td>
+					<td>Team Leader</td>
+					<td>AMC</td>
+					<td><button id='5'>X</button></td>
+				</tr>
+				<tr id="tr6" name='6'>
+					<td>106</td>
+					<td>Sandeep Roy</td>
+					<td>Backend Developer</td>
+					<td>AMC</td>
+					<td><button id='6'>X</button></td>
+				</tr>
+			</table>
+			<div id="div1"></div>
+	</body>
+	<script type="text/javascript">
+			$(document).ready(function(){
+		    	$("button").click(function() {
+    			var id = $(this).attr("id");
+        		$.ajax({
+        			method: 'DELETE',
+        			url: "https://jsonplaceholder.typicode.com/todos/"+id,
+        			success: function(result) {
+						$("tr[name='"+id+"']").remove();
+        			}
+        		});
+    		});
+
+		});
+	</script>
+</html>

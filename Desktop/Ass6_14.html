@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Ass4 Q5
+		</title>
+		<style type="text/css">
+			table{
+				border: 1px solid black; 
+				width:100%;
+				text-align: center; 
+				height: 30px; 
+			}
+			tr{
+				background-color: pink;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+			<h1>td with data >10 have different background color</h1>
+			<table >
+				<tr>
+					<td>1</td>
+					<td>11</td>
+					<td>8</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>7</td>
+					<td>11</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td>100</td>
+					<td>6</td>
+					<td>15</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>8</td>
+					<td>1</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>30</td>
+					<td>3</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>80</td>
+					<td>8</td>
+				</tr>
+			</table>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+    			$("td").each(function() {
+    				if(parseInt($(this).text()) > 10){
+    					console.log('in here');
+    					$(this).css('background-color','gray');
+    				}
+    			});
+    	});
+	</script>
+</html>

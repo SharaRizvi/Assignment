@@ -1,0 +1,37 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			Disable link
+		</title>
+		<style type="text/css">
+		#p1{
+			color:red;
+			height: 10px;
+		}
+		#p2{
+			height: 50px;
+		}
+		#p3{
+			height: 80px;
+		}
+		</style>
+	</head>
+	<body>
+		<center>
+		 	<p id="p1"><i>P1: This page tells you the max height of it's elements</i></h2>
+			<p id="p2"><i>P2: This is a second new pargraph.</i></p>
+			<p id="p3"><i>P2: Hi! I am a new pargraph.</i></p>
+		</center>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+    			var max = 0;
+    			var children = $('center').children();
+    			$("p").each(function(i, element) {
+    		    	var h = $(this).height(); 
+    		    	max = h > max ? h : max;
+    			});
+    			alert("Max height of P element is:"+max);
+    		});
+	</script>
+</html>

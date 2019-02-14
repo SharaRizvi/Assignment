@@ -1,0 +1,28 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			Dynamic button
+		</title>
+		<style type="text/css">
+		 .myClass{
+		 	font-size:30px;
+		 	color:magenta;
+		 	padding-left: 20px;
+		 	padding-right: 20px;
+		 }
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<h2 class="click myClass" id="h21">Click on this heading</h2>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var but=$("<button></button>",{text : "click me!!"});
+		$(document).ready(function(){
+    		$("#h21").click(function(){
+    			$("#div1").append(but);
+    		})
+		});
+	</script>
+</html>

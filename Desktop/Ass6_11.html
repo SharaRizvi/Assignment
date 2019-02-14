@@ -1,0 +1,25 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			preventdefault
+		</title>
+		<style type="text/css">
+		 .myClass{
+		 	font-size:20px;
+		 	color:green;
+		 }
+		</style>
+	</head>
+	<body>
+			<h2>Click on 2nd link to prevent default functionality</h2>
+			<i><a id="link1" href="https://www.google.com" target="_blank">google</a><br/>
+			<a id="link2" href="https://www.google.com" target="_blank">google</a></i>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+    		$("#link2").click(function(event){
+    			event.preventDefault();
+    		})
+		});
+	</script>
+</html>

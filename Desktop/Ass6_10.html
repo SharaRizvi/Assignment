@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<style>
+				#div1{
+   					padding: 10px;
+   					text-align: center;
+   					background-color: green;
+   					border: solid 1px black;
+   					color:white;
+   					font-size: 25px;
+   					font:bold italics;
+				}
+				.p{
+   					padding: 20px;
+   					display: none;
+				}
+			</style>
+		</head>
+		<body>
+			<div id="div1">Hover to slide the panel down or up</div>
+			<div class="p">McD</div>
+			<div class="p">Burger King</div>
+			<div class="p">Dominos</div>
+			<div class="p">Pizza Hut</div>
+		</body>
+			<script>
+				$(document).ready(function(){
+   					$("#div1").hover(function(){
+       					$(".p").slideToggle("slow");
+   					});
+				});
+			</script>
+</html>

@@ -1,0 +1,26 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			.html()
+		</title>
+		<style type="text/css">
+		 .myClass{
+		 	font-size:30px;
+		 	color:magenta;
+		 }
+		</style>
+	</head>
+	<body>
+		<div id="div1">This is a div</div>
+	</body>
+	<script type="text/javascript">
+		$(window).on("load", function () {
+			var el = $("<p></p>", {
+				id: "abc",
+				class: "myClass"
+				});
+				$(el).html("Hi! I am a new paragraph in this div and replaced previous contents on document load.");
+			$("#div1").html(el);
+		});
+	</script>
+</html>

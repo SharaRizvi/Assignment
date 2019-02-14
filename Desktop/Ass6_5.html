@@ -1,0 +1,27 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			document.ready
+		</title>
+		<style type="text/css">
+			#button1{
+				font: bold;
+				font:small-caption;
+			}
+		</style>
+	</head>
+	<body>
+		<br/><br/>
+		<div id="main">{This is main div<p class="target">This is a target p element inside div.</p>}
+		</div>
+			<button id="button1">Click here to change font above</button>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+    		$("#button1").click(function(){
+        		$("#main > .target").css('font-size', '30px');
+    		});
+		});
+
+	</script>
+</html>

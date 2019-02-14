@@ -1,0 +1,35 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			Select element
+		</title>
+		<style type="text/css">
+		 .myClass{
+		 	font-size:30px;
+		 	color:magenta;
+		 	padding-left: 20px;
+		 	padding-right: 20px;
+		 }
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="myClass">
+		<h2 class="click">Select a value</h2>
+		<select class="myClass" id="target">
+  			<option value="Select">Select</option>
+  			<option value="McD">McD</option>
+  			<option value="Burger King">Burger King</option>
+  			<option value="Pizza Hut">Pizza Hut</option>
+  			<option value="Dominos">Dominos</option>
+		</select>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var but=$("<button></button>",{text : "click me!!"});
+		$(document).ready(function(){
+    		$( "#target" ).change(function() {
+  				$("#div1").append(this.value+"  ");
+			});
+		});
+	</script>
+</html>
