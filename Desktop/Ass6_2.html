@@ -1,0 +1,21 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			document.ready
+		</title>
+		<style type="text/css">
+			.load{
+				font:small-caption;
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 id="test">CSS class for this h2 is added through jQuery on dom load</h2>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$("#test").addClass("load");
+		});
+	</script>
+</html>

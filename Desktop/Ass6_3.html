@@ -1,0 +1,17 @@
+<html>
+	<head><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<title>
+			On Page load
+		</title>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<h2 class="heading-new">Color of this heading is changed on page load through jquery</h2>
+	</body>
+	<script type="text/javascript">
+		$(window).on("load", function () {
+			$("[class$=-new]").css("color", "green");
+		});
+	</script>
+</html>
