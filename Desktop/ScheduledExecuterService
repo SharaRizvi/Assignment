@@ -31,12 +31,12 @@ public class Q8ScheduleTask {
             }
         },0,2, TimeUnit.SECONDS);
         try {
-            executorService2.awaitTermination(10L,TimeUnit.SECONDS);
+            executorService2.awaitTermination(10L,TimeUnit.SECONDS);//awaiting termination
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         if(executorService2.isTerminated()){
-            executorService2.shutdownNow();
+            executorService2.shutdownNow();//calling shutdownNow
         }
         ScheduledExecutorService executorService3= Executors.newSingleThreadScheduledExecutor();
         executorService3.scheduleWithFixedDelay(new Runnable() {
