@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :x
-|2,0,1549567772,,"x"
+|2,0,1549616456,,"x"
 :wq
 |2,0,1549446433,,"wq"
 
@@ -27,34 +27,44 @@
 # Registers:
 
 # File marks:
-'0  1  7  ~/ignorefile
-|4,48,1,7,1549567772,"~/ignorefile"
-'1  1  2  ~/new1
-|4,49,1,2,1549567660,"~/new1"
-'2  2  0  ~/newfile
-|4,50,2,0,1549567066,"~/newfile"
-'3  2  0  ~/project2/file1
-|4,51,2,0,1549446433,"~/project2/file1"
-'4  2  0  ~/VersionControl/Shara
-|4,52,2,0,1549444669,"~/VersionControl/Shara"
+'0  2  0  ~/filem
+|4,48,2,0,1549616456,"~/filem"
+'1  1  7  ~/ignorefile
+|4,49,1,7,1549567772,"~/ignorefile"
+'2  1  2  ~/new1
+|4,50,1,2,1549567660,"~/new1"
+'3  2  0  ~/newfile
+|4,51,2,0,1549567066,"~/newfile"
+'4  2  0  ~/project2/file1
+|4,52,2,0,1549446433,"~/project2/file1"
 '5  2  0  ~/VersionControl/Shara
-|4,53,2,0,1549443024,"~/VersionControl/Shara"
-'6  2  0  ~/VersionControl/shara
-|4,54,2,0,1549442814,"~/VersionControl/shara"
-'7  1  4  ~/VersionControl/file2
-|4,55,1,4,1549441999,"~/VersionControl/file2"
-'8  2  0  ~/VersionControl/myfile2
-|4,56,2,0,1549380541,"~/VersionControl/myfile2"
-'9  2  0  ~/VersionControl/myfile1
-|4,57,2,0,1549380326,"~/VersionControl/myfile1"
+|4,53,2,0,1549444669,"~/VersionControl/Shara"
+'6  2  0  ~/VersionControl/Shara
+|4,54,2,0,1549443024,"~/VersionControl/Shara"
+'7  2  0  ~/VersionControl/shara
+|4,55,2,0,1549442814,"~/VersionControl/shara"
+'8  1  4  ~/VersionControl/file2
+|4,56,1,4,1549441999,"~/VersionControl/file2"
+'9  2  0  ~/VersionControl/myfile2
+|4,57,2,0,1549380541,"~/VersionControl/myfile2"
 
 # Jumplist (newest first):
+-'  2  0  ~/filem
+|4,39,2,0,1549616456,"~/filem"
+-'  1  0  ~/filem
+|4,39,1,0,1549616447,"~/filem"
+-'  1  7  ~/ignorefile
+|4,39,1,7,1549567772,"~/ignorefile"
 -'  1  7  ~/ignorefile
 |4,39,1,7,1549567772,"~/ignorefile"
 -'  1  2  ~/new1
 |4,39,1,2,1549567660,"~/new1"
 -'  1  2  ~/new1
 |4,39,1,2,1549567660,"~/new1"
+-'  1  2  ~/new1
+|4,39,1,2,1549567660,"~/new1"
+-'  1  2  ~/new1
+|4,39,1,2,1549567660,"~/new1"
 -'  2  0  ~/newfile
 |4,39,2,0,1549567066,"~/newfile"
 -'  2  0  ~/newfile
@@ -63,6 +73,22 @@
 |4,39,2,0,1549567066,"~/newfile"
 -'  2  0  ~/newfile
 |4,39,2,0,1549567066,"~/newfile"
+-'  2  0  ~/newfile
+|4,39,2,0,1549567066,"~/newfile"
+-'  2  0  ~/newfile
+|4,39,2,0,1549567066,"~/newfile"
+-'  2  0  ~/newfile
+|4,39,2,0,1549567066,"~/newfile"
+-'  2  0  ~/newfile
+|4,39,2,0,1549567066,"~/newfile"
+-'  1  0  ~/newfile
+|4,39,1,0,1549567048,"~/newfile"
+-'  1  0  ~/newfile
+|4,39,1,0,1549567048,"~/newfile"
+-'  1  0  ~/newfile
+|4,39,1,0,1549567048,"~/newfile"
+-'  1  0  ~/newfile
+|4,39,1,0,1549567048,"~/newfile"
 -'  1  0  ~/newfile
 |4,39,1,0,1549567048,"~/newfile"
 -'  1  0  ~/newfile
@@ -87,6 +113,38 @@
 |4,39,2,0,1549446433,"~/project2/file1"
 -'  2  0  ~/project2/file1
 |4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  2  0  ~/project2/file1
+|4,39,2,0,1549446433,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
+-'  1  0  ~/project2/file1
+|4,39,1,0,1549446415,"~/project2/file1"
 -'  1  0  ~/project2/file1
 |4,39,1,0,1549446415,"~/project2/file1"
 -'  1  0  ~/project2/file1
@@ -136,7 +194,37 @@
 -'  2  0  ~/VersionControl/Shara
 |4,39,2,0,1549444669,"~/VersionControl/Shara"
 -'  2  0  ~/VersionControl/Shara
-|4,39,2,0,1549443024,"~/VersionControl/Shara"
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
+-'  2  0  ~/VersionControl/Shara
+|4,39,2,0,1549444669,"~/VersionControl/Shara"
 -'  2  0  ~/VersionControl/Shara
 |4,39,2,0,1549443024,"~/VersionControl/Shara"
 -'  2  0  ~/VersionControl/Shara
@@ -161,96 +249,16 @@
 |4,39,2,0,1549443024,"~/VersionControl/Shara"
 -'  2  0  ~/VersionControl/Shara
 |4,39,2,0,1549443024,"~/VersionControl/Shara"
--'  2  0  ~/VersionControl/Shara
-|4,39,2,0,1549443024,"~/VersionControl/Shara"
--'  2  0  ~/VersionControl/Shara
-|4,39,2,0,1549443024,"~/VersionControl/Shara"
--'  2  0  ~/VersionControl/Shara
-|4,39,2,0,1549443024,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  1  0  ~/VersionControl/Shara
-|4,39,1,0,1549443016,"~/VersionControl/Shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
--'  2  0  ~/VersionControl/shara
-|4,39,2,0,1549442814,"~/VersionControl/shara"
 
 # History of marks within files (newest to oldest):
+
+> ~/filem
+	*	1549616454	0
+	"	2	0
+	^	2	0
+	.	1	5
+	+	1	5
+	f	1	0
 
 > ~/ignorefile
 	*	1549567770	0

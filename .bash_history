@@ -552,3 +552,44 @@ git branch test-1
 git checkout test-1
 git branch
 clear
+sudo git pull origin master
+clear
+cd Versioncontrol
+cd VersionControl
+sudo git pull origin master
+cd ..
+cd ToTheNew
+sudo git pull origin master
+clear
+sudo git pull origin master
+clear
+sudo git pull origin master
+clear
+git checkout test -1
+git branch
+clear
+git branch test -2
+git checkout test-1
+git branch test-2
+cd ..
+clear
+git checkout test-1
+git branch
+ls
+touch file1
+sudo git add .
+sudo git commit -m "Added file 2"
+ls
+touch file1
+sudo git commit -m "Added file 1"
+ls
+touch file2
+sudo git commit -m "Added file 2"
+clear
+ls
+touch file3
+sudo git add .
+sudo git commit -m "Added file 3"
+git status
+sudo git checkout master
+ls
