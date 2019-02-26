@@ -1,0 +1,62 @@
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+public class Q8ScheduleTask {
+    public static void main(String[] args) {
+        ScheduledExecutorService executorService1= Executors.newSingleThreadScheduledExecutor();
+        final int[] i = {0,0,0};
+        executorService1.schedule(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Thread 1 Task "+(++i[0]));
+            }
+        },4, TimeUnit.SECONDS);
+        executorService1.shutdown();
+        ScheduledExecutorService executorService2= Executors.newSingleThreadScheduledExecutor();
+        executorService2.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Thread 2 Task "+(++i[1]));
+            }
+        },0,2, TimeUnit.SECONDS);
+        try {
+            executorService2.awaitTermination(10L,TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if(executorService2.isTerminated()){
+            executorService2.shutdownNow();
+        }
+        ScheduledExecutorService executorService3= Executors.newSingleThreadScheduledExecutor();
+        executorService3.scheduleWithFixedDelay(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Thread 3 Task "+(++i[2]));
+            }//adds time to the completion of last task execution
+        },0,2, TimeUnit.SECONDS);
+        try {
+            executorService3.awaitTermination(10L,TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if(executorService3.isTerminated()){
+            executorService3.shutdownNow();
+        }
+    }
+}
