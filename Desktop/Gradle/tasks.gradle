@@ -1,0 +1,6 @@
+task task1 {
+    println "Task 1 in gradle"
+}
+task task2{
+    println "Task 2 in gradle"
+}
